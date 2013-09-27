@@ -1,0 +1,40 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body { height: 100%; }
+
+body {
+}
+
+.container {
+  padding-top: 150px;
+}
+
+img.circular {
+  border-radius: 500px;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+}
+
+#portrait{
+  display: block;
+  width: 150px;
+  height: 150px;
+}
+
+#projects {
+  margin: 50px 0;
+}
+
+img.thumbnail {
+  width: 100%;
+}

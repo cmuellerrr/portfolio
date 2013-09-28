@@ -5,19 +5,26 @@
 /*****************************************************************************/
 
 /* Global Reset */
+
 * {
   margin: 0;
   padding: 0;
 }
 
+/* General */
+
 html, body { height: 100%; }
 
-body {
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Courier New", Courier, monospace;
 }
 
 .container {
   padding-top: 150px;
 }
+
+
+/* Greeting */
 
 img.circular {
   border-radius: 500px;
@@ -25,16 +32,38 @@ img.circular {
   -moz-border-radius: 500px;
 }
 
-#portrait{
-  display: block;
+#portrait {
   width: 150px;
   height: 150px;
 }
 
+#greeting {
+  font-size: 30px;
+  line-height: 32px;
+}
+
+/* Project List */
+
 #projects {
-  margin: 50px 0;
+  margin: 100px 0;
 }
 
 img.thumbnail {
   width: 100%;
+}
+
+h3.title {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+h3.title a {
+  text-decoration: none;
+}
+
+/* Project */
+
+div.section {
+  margin-bottom: 100px;
 }

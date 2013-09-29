@@ -1,0 +1,28 @@
+---
+layout: post
+title: "JavaScriptIOn"
+date: 2010-05-15
+categories: 
+excerpt: Direct I/O in a web browser using native JavaScript objects.
+thumbnail: assets/images/javascription/thumb.png
+---
+
+<div class="section row">
+	<div class="five columns">
+		<h3 class="title">Overview</h3>
+		<p>As part of an independent study, I took on the task of trying to allow direct I/O from a web browser using native JavaScript – no plugins.  Plugins are entirely unnecessary and this project was trying to put a dent in that model.  The goal was to allow developers to  to handle complex I/O like webcam input using simple JavaScript objects without having to force users to download a Flash plugin.  I ended up choosing Firefox as the browser to modify because of its maturity and wide user base.</p>
+	</div>
+	<div class="ten columns offset-by-one">
+	</div>
+</div>
+
+<div class="section row">
+	<div class="five columns">
+		<h3 class="title">Implementation</h3>
+		<p>I developed a proof of concept of this by creating a native JavaScript object for the PlayStation3 Dualshock 3 controller.  In order to do this I had to first create a simple Linux driver for the controller which could read what buttons were pressed (and how hard).  That driver was then hooked up to the C implementation of the JavaScript object to pass the data up to the web browser.  In the end, the browser was able to see all input from the controller using one object.
+
+		Admittedly, the project didn’t get as far as I had hoped, but it was very close.  Ideally, this concept could have been abstracted further to allow for easy extension in addition to a more useful proof of concept like being able to navigate a web page using the controller.</p>
+	</div>
+	<div class="ten columns offset-by-one">
+	</div>
+</div>

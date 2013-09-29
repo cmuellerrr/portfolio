@@ -1,0 +1,43 @@
+---
+layout: post
+title: "flashtrack"
+date: 2010-05-16
+categories: 
+excerpt: Using blob-tracking to traverse obstacle courses with a hand-held object.
+thumbnail: assets/images/flashtrack/thumb.png
+---
+
+<div class="section row">
+	<div class="five columns">
+		<h3 class="title">Overview</h3>
+		<p>For an individual capstone project, I undertook an experiment in using computer vision to provide input to a game.  The concept was to track an object held by the user and have them navigate an obstacle course by mapping the tracked object’s movement to that of the cursor. Users are presented with a simple obstacle course – a start, a finish, and walls – and had to draw a single, continuous line from the start position to the end using their tracked object.  If a wall is touched, then the user would have to start over.</p>
+	</div>
+	<div class="ten columns offset-by-one">
+	</div>
+</div>
+
+<div class="section row">
+	<div class="five columns">
+		<h3 class="title">Design</h3>
+		<p>I wanted the users to be able to pick up the application without any need for instructions so there was a big focus on simple mechanics and clear goals.  Being that openFrameworks is typically used in the generation of more artistic applications, I also wanted to make sure to capture the correct aesthetic.
+
+		Specifically, I was going for a very minimalist feel with the visuals taking on a restrained and vacant approach by each line having a soft glow effect and thin weight.</p>
+	</div>
+	<div class="ten columns offset-by-one">
+	</div>
+</div>
+
+<div class="section row">
+	<div class="five columns">
+		<h3 class="title">Implementation</h3>
+		<p>I also focused a lot of time on a course creation portion of the game and ended up with a fairly robust utility.  Users could easily make or modify walls, delete points and the line segments between points, as well as save and load completed courses to XML files which were then used in the game.  Again, minimalist controls and visuals cues were used to provide instruction.
+
+		One of the many challenges with this application was having the camera properly calibrated for each user’s environment.  I knew this would be an issue, so I developed an easy mechanism for changing parameters to suit any environment (within reason).
+
+		It was here that users could select to either track by a light source or by a selected object.  If a user wanted to track by an object, they could click on any portion of the camera feed and the application would begin to track that object by its color.
+
+		It was most interesting to see users actually play with the application.  Despite a few hiccups, I observed that users were able to pick up the game and dive right in – which I considered a big success.  At the time of release there were still some bugs, most notably in the registration of false positives for course collision, but this is a pretty simple fix that will have to come at a later time.</p>
+	</div>
+	<div class="ten columns offset-by-one">
+	</div>
+</div>

@@ -9,54 +9,57 @@ thumbnail: assets/images/modal_nodes/thumb.png
 
 <div class="section row">
 	<div class="five columns">
-		<h3 class="title">Overview</h3>
-		<p>I worked with my friend Charles on an project to create an interactive music sequencer utilizing the Microsoft Kinect and Processing.  Our goal was to create an atmospheric, ambient setting with visual and audio feedback conveying musical notes which we define as nodes. In the environment, users are able to place nodes on the screen to produce musical sequences with the position along the y axis determining the tone, the x axis determining the general timing, and the z axis determining size and fine-grained timing.</p>
+		<p>Modal Nodes is a large-scale music sequencer which analyzes human motion for all interaction. In the environment, users are able to place nodes on the screen to produce atmospheric musical sequences.</p>
 	</div>
 	<div class="ten columns offset-by-one">
+		<iframe class="fill" src="http://player.vimeo.com/video/69808942?byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	</div>
 </div>
 
 <div class="section row">
 	<div class="five columns">
 		<h3 class="title">User Study</h3>
-		<p>While developing the application, we sought to test differences between gesture-based and pose-based interactions.  We utilized predefined gesture interactions for placing and deleting nodes and custom, pose-based interactions for creating and placing nodes.  One of the Kinect’s weak points is accurately analyzing movement along the z axis so our custom poses resided solely in the Coronal (x-y) plane.
+		<p>A goal of this project was to test differences between gesture-based (movement over time) and pose-based (static) interactions. So, we set up several user tests throughout the development of the application to get concrete data. Participants were free to experiment with the system as they desired and were observed for physical difficulties, mental disconnects, and personal preferences.</p>
 
-		In order to obtain concrete data regarding our interaction techniques, we set up several user tests throughout the development of the application. These tests utilized a common space in the MHCI laboratory which was equipped with a projector and provided participants sufficient room to move and interact with the system.
-
-		No formal recruiting of participants was performed; students passing by were invited to test the system if curious. After a brief tutorial, participants were free to experiment with the system as they desired. Participants were observed for physical difficulties, mental disconnects, and personal preferences.
-
-		We found that gestures had good affordance yet caused high levels of fatigue while the poses were easily performed but had low discoverability.  While there are pros and cons to both mechanisms and additional tuning could be used to overcome certain issues in both, we concluded that pose-based interactions are a more effective interactive technique for this application.</p>
+		<p>We found that gestures had good affordance yet caused higher levels of fatigue while the poses were easily performed but had low discoverability. While additional tuning could be used to overcome certain issues in both, we concluded that pose-based interactions were a more effective interactive technique for this application.</p>
 	</div>
 	<div class="ten columns offset-by-one">
-		<img class="thumbnail" src="/assets/images/modal_nodes/diagram.png">
-		<img class="thumbnail" src="/assets/images/modal_nodes/poses.png">
+		<img class="fill" src="/assets/images/modal_nodes/diagram.png">
+		<img class="fill" src="/assets/images/modal_nodes/poses.png">
 	</div>
 </div>
 
 <div class="section row">
 	<div class="five columns">
-		<h3 class="title">Implementation</h3>
-		<p>The application is focused on the novice user, enabling participants of various backgrounds to interact with the environment without instruction or previous musical knowledge. Due to the focus on a broad user base, we placed a significant emphasis on assuring that the audio output is pleasant in every case and that the interactions are both intuitive and easy to perform. We got this by utilizing a fairly long echo effect which allows the tones to blend together nicely and by staying away from sharp, abrasive tones.
+		<h3 class="title">Affordances</h3>
+		<p>With walk-up-and-use being a necessity, we needed to make sure that the interactions are both intuitive and easy to perform. One way we accomplish this is by having the environment react as a user approaches completing an action.</p>
 
-		We also put a lot of effort into setting an atmosphere that complemented the music being created. We wanted a heavy, space-like feel, so we set a deep blue background and developed a particle swarming system to add ambient movement in the background. We also ran some experiments with utilizing this particle system in a more active role.
-
-		An idea we prototyped was to have the particles move from the background and swarm around a user’s hands as they began the process of creating a node – the closer they were to completing the gesture, the tighter and faster the particles swarmed. Aside from being pretty cool, this provided extra affordance for the node creation gesture.</p>
+		<p>For example, when users begin the process of creating a node, the normally ambient particles move away from the background and swarm around a user’s hands – the closer a user is to completing the action, the tighter and faster the particles swarmed.</p>
 	</div>
 	<div class="ten columns offset-by-one">
-		<img class="thumbnail" src="/assets/images/modal_nodes/ex1.png">
-		<img class="thumbnail" src="/assets/images/modal_nodes/ex2.png">
-		<img class="thumbnail" src="/assets/images/modal_nodes/ex3.png">
-		<img class="thumbnail" src="/assets/images/modal_nodes/ex4.jpg">
+		<img class="fill" src="/assets/images/modal_nodes/ex1.png">
+		<img class="fill" src="/assets/images/modal_nodes/ex2.png">
+		<img class="fill" src="/assets/images/modal_nodes/ex3.png">
+		<img class="fill" src="/assets/images/modal_nodes/ex4.jpg">
 	</div>
 </div>
 
 <div class="section row">
 	<div class="five columns">
-		<h3 class="title">Future</h3>
-		<p>Although pleased with our current implementation, we feel that our visualizations and interactions have not been fully realized.  The interactions are not yet at a level in which the application could be used by a new user without some sort of instruction.  Furthermore, we seek to improve upon the audio processing capabilities of the system.
-
-		Although easy to use, users are somewhat handicapped by the limited tones available.  Providing additional audio effects, either by having nodes interact with each other or through alteration of the nodes themselves, would provide further avenues for users to explore when creating sequences.</p>
+		<h3 class="title">Audio</h3>
+		<p>Modal Nodes is designed for public spaces. Therefore, we placed a significant emphasis on ensuring that the resulting audio sequence is pleasant in every case. We got this by utilizing a fairly long echo effect which allows the tones to blend together nicely and by staying away from sharp, abrasive tones.</p>
 	</div>
 	<div class="ten columns offset-by-one">
 	</div>
 </div>
+
+<!--
+<div class="section row">
+	<div class="five columns">
+		<h3 class="title">Improvements</h3>
+		<p>Although pleased with our current implementation, we feel that our visualizations and interactions have not been fully realized. The interactions are not yet at a level in which the application could be used by a new user without some sort of instruction.  Furthermore, we seek to improve upon the audio processing capabilities of the system. Providing additional audio effects, either by having nodes interact with each other or through alteration of the nodes themselves, would provide further avenues for users to explore.</p>
+	</div>
+	<div class="ten columns offset-by-one">
+	</div>
+</div>
+-->

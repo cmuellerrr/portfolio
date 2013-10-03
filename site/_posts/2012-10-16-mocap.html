@@ -9,10 +9,7 @@ thumbnail: assets/images/mocap/thumb.png
 
 <div class="section row">
 	<div class="five columns">
-		<h3 class="title">Overview</h3>
-		<p>I was fortunate enough to be able to capture some full body motion using the equipment in the CMU motion capture lab.  Myself and my team were tasked with capturing the motion of several students, analyzing it, and making it publicly available as part of the CMU mocap database.
-
-		I had the idea that it would be interesting to try and quantify the difference in how someone throws with their dominant hand as opposed to their non-dominant hand.  Whenever I throw with my non-dominant hand, it always feels incredibly awkward and is much less accurate – I wanted to see how obvious it is to tell which hand is dominant.</p>
+		<p>This project dealt with the analysis of human motion data to quantify the difference in how someone throws with their dominant hand as opposed to their non-dominant hand.</p>
 	</div>
 	<div class="ten columns offset-by-one">
 	</div>
@@ -21,9 +18,7 @@ thumbnail: assets/images/mocap/thumb.png
 <div class="section row">
 	<div class="five columns">
 		<h3 class="title">Process</h3>
-		<p>Conceptually, motion capture is pretty simple: use cameras to track distinct joints on a body and build a skeleton around it. The hard part is calibrating the cameras, placing the markers, and cleaning up the data (mainly because of issues that occur when the cameras lose a marker for a short time and the point is interpolated incorrectly).
-
-		After completing the capture and cleanup, the resulting data was analyzed using MATLAB to try and draw some conclusions.  We hypothesized that either the distance the arm traveled backwards during windup or the smoothness of the arm motion would be a deciding factor but neither of which showed any consistent correlation.</p>
+		<p>Conceptually, motion capture is pretty simple: use cameras to track distinct joints on a body and build a skeleton around it. The hard part is calibrating the cameras, placing the markers, and cleaning up the data. After we completed the capture and cleanup, the resulting data was analyzed using MATLAB.</p>
 	</div>
 	<div class="ten columns offset-by-one">
 		<img class="thumbnail" src="/assets/images/mocap/suited.png">
@@ -45,9 +40,9 @@ thumbnail: assets/images/mocap/thumb.png
 <div class="section row">
 	<div class="five columns">
 		<h3 class="title">Results</h3>
-		<p>It turns out that the peak velocity of the arm was a pretty good indicator of which hand was dominant; correctly predicting 8 out of 9 subjects.  However being that there were only 9 subjects, this can’t actually be considered statistically significant, but it’s interesting nonetheless.
+		<p>We hypothesized that either the distance the arm traveled backwards during windup or the smoothness of the arm motion would be a deciding factor in predicting handedness, but neither showed any consistent correlation. Even so, it turns out that the peak velocity of the arm was a pretty good indicator of which hand was dominant; correctly predicting 8 out of 9 subjects.</p>
 
-		After completing the capture and cleanup, the resulting data was analyzed using MATLAB to try and draw some conclusions.  We hypothesized that either the distance the arm traveled backwards during windup or the smoothness of the arm motion would be a deciding factor but neither of which showed any consistent correlation.</p>
+		<p>However being that there were only 9 subjects, this can’t actually be considered statistically significant, but it’s interesting nonetheless.</p>
 	</div>
 	<div class="ten columns offset-by-one">
 	</div>

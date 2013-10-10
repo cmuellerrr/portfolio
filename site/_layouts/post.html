@@ -2,9 +2,22 @@
 layout: default
 ---
 
-<div class="sixteen columns">
-  <h2>{{ page.title }}</h2>
-  <p class="meta">{{ page.date | date_to_string }}</p>
+<div class="section row">
+  <div class="five columns">
+    <h2>{{ page.title }}</h2>
+    
+    {% if page.team != null %}
+      <p class="meta">
+        Team: 
+
+        {% for t in page.team %}
+          {{ t }}{% if forloop.last == false %},{% endif %}
+        {% endfor %}
+      
+      </p>
+    {% endif %}
+  
+  </div>
 </div>
 
 {{ content }}

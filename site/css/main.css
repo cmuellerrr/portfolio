@@ -27,7 +27,6 @@ p {
   padding-top: 150px;
 }
 
-
 /* Greeting */
 
 img.circular {
@@ -49,6 +48,12 @@ img.circular {
 
 img.fill {
   width: 100%;
+}
+
+img.border {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #E3E3E3;
 }
 
 iframe.fill {

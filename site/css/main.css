@@ -78,6 +78,15 @@ h3.title a {
 }
 
 
+.nav {
+  margin-top: -150px;
+  background-color: white;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
 /* Media Queries */
 
 /* #Tablet (Portrait) */

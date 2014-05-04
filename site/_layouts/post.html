@@ -1,23 +1,40 @@
 ---
 layout: default
 ---
-<div class="nav sixteen columns"><a href="http://www.iammueller.com"><< Home</a></div>
-<div class="section row">
-  <div class="five columns">
+
+<header class="content">
+  <nav><a href="http://www.iammueller.com"><< Home</a></nav>
+</header>
+
+<div class="content">
+  <div class="summary">
     <h2>{{ page.title }}</h2>
 
     {% if page.team != null %}
       <p class="meta">
         Team: 
-
         {% for t in page.team %}
           {{ t }}{% if forloop.last == false %},{% endif %}
         {% endfor %}
-      
       </p>
     {% endif %}
-  
-  </div>
-</div>
 
-{{ content }}
+    <div>
+        {{ page.highlight }}
+        <p>{{ page.summary }}</p>
+
+        {% if page.source != null &}
+          <p><a href="{{ page.source }}" target="_blank">View source</a></p>
+        {% endif %}
+
+        {% if page.download != null &}
+          <p><a href="{{ site.url }}/{{ page.download }}" target="_blank">Download full</a></p>
+        {% endif %}
+    </div>
+  </div>
+  
+  <div>
+    {{ content }}
+  </div>
+
+</div>

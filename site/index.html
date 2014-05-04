@@ -3,44 +3,33 @@ layout: default
 title: Home
 ---
 
-<div class="row">
-  <div class="four columns">
+<div class="content">
+  <div class="intro">
     <img id="portrait" src="assets/images/8bitchris.png" alt="this is me"/>
-  </div>
-</div>
-<div class="row">
-	<div class="ten columns">
-    <h1 id="greeting">Hi. I'm Chris - an <strong>interaction designer</strong> and maker of things.</h1>
-  </div>
-</div>
-
-<div id="about" class="row">
-  <div class="nine columns">
-    <p>I'm especially interested in music, art and technology. I enjoy learning and I like working with my hands. Overall, I'm looking for small ways make the world a more magical place.</p>
+    <h1>Hi. I'm Chris - a <b>designer</b> and <b>developer</b>.</h1>
+    <p>I like making things. I also enjoy learning and working with my hands.</p>
     <p>Currently, I'm designing things at <strong>NASA Ames Research Center</strong> in Mountain View, CA.</p>
-    <p>You can check out some of my work below or other stuff via the following links.</p>
-    <p>
-      <a id="email" href="#">email</a><br />
-      <a href="assets/resume.pdf" target="_blank">resume</a><br />
-      <a href="http://github.com/cmuellerrr/" target="_blank">github</a><br />
-      <a href="http://twitter.com/cmuellerrr/" target="_blank">twitter</a><br />
-      <a href="http://linkedin.com/in/cmuellerrr/" target="_blank">linkedin</a><br />
-    </p>
+    <ul>      
+      <li><a href="http://github.com/cmuellerrr/" target="_blank">github</a></li>
+      <li><a href="http://twitter.com/cmuellerrr/" target="_blank">twitter</a></li>
+      <li><a href="http://linkedin.com/in/cmuellerrr/" target="_blank">linkedin</a></li>
+      <li><a href="assets/resume.pdf" target="_blank">r&ecirc;sum&ecirc;</a></li>
+      <li><a id="email" href="#">email</a></li>
+    </ul>
   </div>
-</div>
 
-<div id="projects" class="clearfix">
-
-  {% for post in site.posts %}
-  	<div class="project row">
-      <div class="three columns">
-      	<a href="{{ post.url }}"><img class="fill" src="{{ post.thumbnail }}"></a>
+  <div class="projects">
+    
+    {% for post in site.posts %}
+    
+      <div class="project">
+        <h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        {{ post.highlight }}
+        <!--<img class="fill" src="{{ post.thumbnail }}">-->
+        <p>{{ post.summary }} <span><a href="{{ post.url }}">More >></a></span></p> 
       </div>
-  	  <div class="five columns">
-  		  <h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-  		  <p>{{ post.excerpt }}</p>	
-  	  </div>
-  	</div>
-  {% endfor %}
+    
+    {% endfor %}
 
+  </div>  
 </div>

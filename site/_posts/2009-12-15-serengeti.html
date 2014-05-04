@@ -4,8 +4,8 @@ title: "Serengeti"
 completed: Dec 2009
 length: 4 months
 categories: projects
-excerpt: A team-based application for claiming real-life locations.
-thumbnail: assets/images/serengeti/thumb.png
+summary: Serengeti is a location-aware, social networking application which uses the concept of teams as the driving force behind its usage.  Users can join together to claim real-life territory in the name of their team.
+highlight: assets/images/serengeti/thumb.png
 team:
   - Loren Abrams
   - Lita Gratrix
@@ -17,32 +17,16 @@ role: Lead designer and project manager. Myself and another student also wrote t
 tools: Java, JavaScript, SQL, Objective C (iPhone), Java Spring
 ---
 
-<div class="section row">
-	<div class="five columns">
-		<p>Serengeti is a location-aware, social networking application which uses the concept of teams as the driving force behind its usage.  Users can join together to claim real-life territory in the name of their team.</p>
-	</div>
-	<div class="ten columns offset-by-one">
-	</div>
+<div class="section">
+	<h3 class="title">Concept</h3>
+	<p>The concept was to turn the idea of a 'check in' into something more meaningful. So, we decided that combining that with group-based conquest would be the perfect avenue to explore.</p>
+
+	<p>The point of the application was pretty simple – based on a user’s current location, provide a list of possible locations that were within a set radius.  A user could then choose their current location and check-in as a member of a team. Every check-in to a location would garner points for that team; the team with the most points at a location claimed that place as their own.</p>
 </div>
 
-<div class="section row">
-	<div class="five columns">
-		<h3 class="title">Concept</h3>
-		<p>The concept was to turn the idea of a 'check in' into something more meaningful. So, we decided that combining that with group-based conquest would be the perfect avenue to explore.</p>
+<div class="section">
+	<h3 class="title">Implementation</h3>
+	<p>We wanted to be able to show a team’s controlled territory in an interesting way. I ended up implementing a K-means clustering algorithm to group controlled territory into clusters and then used the Graham scan method for determining the convex hull of each cluster. Those convex hulls were then drawn as overlays on a map using the team’s chosen color.</p>
 
-		<p>The point of the application was pretty simple – based on a user’s current location, provide a list of possible locations that were within a set radius.  A user could then choose their current location and check-in as a member of a team. Every check-in to a location would garner points for that team; the team with the most points at a location claimed that place as their own.</p>
-	</div>
-	<div class="ten columns offset-by-one">
-	</div>
-</div>
-
-<div class="section row">
-	<div class="five columns">
-		<h3 class="title">Implementation</h3>
-		<p>We wanted to be able to show a team’s controlled territory in an interesting way. I ended up implementing a K-means clustering algorithm to group controlled territory into clusters and then used the Graham scan method for determining the convex hull of each cluster. Those convex hulls were then drawn as overlays on a map using the team’s chosen color.</p>
-
-		<p>The application was built as both a web application (including a mobile optimized version) and an iPhone application.</p>
-	</div>
-	<div class="ten columns offset-by-one">
-	</div>
+	<p>The application was built as both a web application (including a mobile optimized version) and an iPhone application.</p>
 </div>

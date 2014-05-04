@@ -4,8 +4,8 @@ title: "Modal Nodes"
 completed: Dec 2012
 length: 2 months
 categories: projects
-excerpt: An interactive music installation for creating atmospheric soundscapes.
-thumbnail: assets/images/modal_nodes/thumb.png
+summary: Modal Nodes is a large-scale music sequencer which uses the Microsoft Kinect to gather all input. In the environment, users are able to place nodes on the screen to produce atmospheric musical sequences.
+highlight: <iframe class="fill" src="http://player.vimeo.com/video/69808942?byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 source: https://www.github.com/cmuellerrr/modal-nodes
 team: 
   - <a href="http://www.cka.co" target="_blank">Charles Aweida</a>
@@ -13,61 +13,34 @@ role: Overall design and implementation were split evenly.
 tools: Java, Processing, Microsoft Kinect
 ---
 
-<div class="section row">
-	<div class="five columns">
-		<p>Modal Nodes is a large-scale music sequencer which uses the Microsoft Kinect to gather all input. In the environment, users are able to place nodes on the screen to produce atmospheric musical sequences.</p>
-
-		<p><a href=" {{page.source}} " target="_blank">View source on github</a></p>
-	</div>
-	<div class="ten columns offset-by-one">
-		<iframe class="fill" src="http://player.vimeo.com/video/69808942?byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-	</div>
+<div class="section">
+	<h3 class="title">Concept</h3>
+	<p>In Modal Nodes, user-created nodes act as musical notes which are placed around the virtual environment.  Their X position dictates when they are played, while their Y position determines their tone. Additionally, a node's Z position alters its diameter, which allows for fine-tuned timing.</p>
+	<img class="fill" src="/assets/images/modal_nodes/diagram.png">
+	<img class="fill" src="/assets/images/modal_nodes/ex1.png">
+	<img class="fill" src="/assets/images/modal_nodes/ex2.png">
+	<img class="fill" src="/assets/images/modal_nodes/ex3.png">
 </div>
 
-<div class="section row">
-	<div class="five columns">
-		<h3 class="title">Concept</h3>
-		<p>In Modal Nodes, user-created nodes act as musical notes which are placed around the virtual environment.  Their X position dictates when they are played, while their Y position determines their tone. Additionally, a node's Z position alters its diameter, which allows for fine-tuned timing.</p>		
-	</div>
-	<div class="ten columns offset-by-one">		
-		<img class="fill" src="/assets/images/modal_nodes/diagram.png">
-		<img class="fill" src="/assets/images/modal_nodes/ex1.png">
-		<img class="fill" src="/assets/images/modal_nodes/ex2.png">
-		<img class="fill" src="/assets/images/modal_nodes/ex3.png">
-	</div>
+<div class="section">
+	<h3 class="title">Pose vs Gesture</h3>
+	<p>A goal of this project was to test differences between gesture-based (movement over time) and pose-based (static) interactions. Through several user testing sessions, we found that gestures had good affordance yet caused higher levels of fatigue while poses were easily performed but had low discoverability. We decided to use a combination of both to optimize the experience.</p>	
+	<img class="fill" src="/assets/images/modal_nodes/pose_v_gesture.png">
 </div>
 
-<div class="section row">
-	<div class="five columns">
-		<h3 class="title">Pose vs Gesture</h3>
-		<p>A goal of this project was to test differences between gesture-based (movement over time) and pose-based (static) interactions. Through several user testing sessions, we found that gestures had good affordance yet caused higher levels of fatigue while poses were easily performed but had low discoverability. We decided to use a combination of both to optimize the experience.</p>
-	</div>
-	<div class="ten columns offset-by-one">		
-		<img class="fill" src="/assets/images/modal_nodes/pose_v_gesture.png">
-	</div>
+<div class="section">
+	<h3 class="title">Affordances</h3>
+	<p>With walk-up-and-use being a necessity, we needed to make sure that the interactions were both intuitive and easy to perform. One way we accomplish this is by having the environment react as a user begins to complete an action.</p>
+
+	<p>For example, when users begin the process of creating a node, the normally ambient particles move away from the background and swarm around a user’s hands – the closer a user is to completing the action, the tighter and faster the particles swarmed (as shown in an exaggerated form here).</p>
+	<img class="fill" src="/assets/images/modal_nodes/swarm_1.png">
+	<img class="fill" src="/assets/images/modal_nodes/swarm_2.png">
+	<img class="fill" src="/assets/images/modal_nodes/swarm_3.png">
 </div>
 
-<div class="section row">
-	<div class="five columns">
-		<h3 class="title">Affordances</h3>
-		<p>With walk-up-and-use being a necessity, we needed to make sure that the interactions were both intuitive and easy to perform. One way we accomplish this is by having the environment react as a user begins to complete an action.</p>
-
-		<p>For example, when users begin the process of creating a node, the normally ambient particles move away from the background and swarm around a user’s hands – the closer a user is to completing the action, the tighter and faster the particles swarmed (as shown in an exaggerated form here).</p>
-	</div>
-	<div class="ten columns offset-by-one">
-		<img class="fill" src="/assets/images/modal_nodes/swarm_1.png">
-		<img class="fill" src="/assets/images/modal_nodes/swarm_2.png">
-		<img class="fill" src="/assets/images/modal_nodes/swarm_3.png">
-	</div>
-</div>
-
-<div class="section row">
-	<div class="five columns">
-		<h3 class="title">Audio</h3>
-		<p>We also placed a significant emphasis on ensuring that the resulting audio sequence is pleasant in every case. We got this by utilizing a fairly long echo effect which allows the tones to blend together nicely and by staying away from sharp, abrasive tones.</p>
-	</div>
-	<div class="ten columns offset-by-one">
-	</div>
+<div class="section">
+	<h3 class="title">Audio</h3>
+	<p>We also placed a significant emphasis on ensuring that the resulting audio sequence is pleasant in every case. We got this by utilizing a fairly long echo effect which allows the tones to blend together nicely and by staying away from sharp, abrasive tones.</p>
 </div>
 
 <!--

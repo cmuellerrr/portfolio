@@ -4,33 +4,25 @@
 /*
 /*****************************************************************************/
 
-/* Global Reset */
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
 /* General */
 
-html, body { height: 100%; }
-
-body, h1, h2, h3, h4, h5, h6 {
-  font-family: Courier, monospace;
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
-p {
-  font-size: 12px;
+html, body { 
+  height: 100%;
+  font-family: 'Avenir Next', 'Open Sans', sans-serif;
+  font-size: 14px;
 }
 
-p.caption {
-  font-size: 10px;
-  text-align: right;
-  margin: 0;
-}
-
-.container {
-  padding-top: 150px;
+.content {
+  width: 600px;
+  padding: 0 20px;
 }
 
 img.fill {
@@ -38,15 +30,7 @@ img.fill {
 }
 
 img.border {
-  border-style: solid;
-  border-width: 1px;
-  border-color: #E3E3E3;
-}
-
-img.circular {
-  -webkit-border-radius: 500px;
-  -moz-border-radius: 500px;
-  border-radius: 500px;
+  border: 1px solid #E3E3E3;
 }
 
 iframe.fill {
@@ -54,68 +38,54 @@ iframe.fill {
    height: 326px;
 }
 
-/* Greeting */
+/* Intro */
 
-#greeting {
-  font-size: 30px;
-  line-height: 32px;
+.into h1 {
+  font-size: 28px;
+}
+
+.intro ul {
+  display: table;
+  width: 100%;
+  list-style: none;
+}
+
+.intro ul li {
+  display: table-cell;
+  text-align: center;
+}
+
+.intro ul li a {
+  display: block;
 }
 
 /* Project List */
 
-#projects {
+.projects {
   margin: 100px 0;
 }
 
-h3.title {
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: bold;
+.project .title,
+.section .title {
+  font-size: 20px;
 }
 
-h3.title a {
+.project .title a {
   text-decoration: none;
 }
 
 /* Project */
 
+.summary h2 {
+  font-size: 24px;
+}
+
 .section {
   margin-bottom: 100px;
 }
 
-
-.nav {
-  margin-top: -150px;
-  background-color: white;
-}
-
-.nav a {
-  text-decoration: none;
-}
-
-/* Media Queries */
-
-/* #Tablet (Portrait) */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  /* TODO there must be a better way to make iframes stretch horizontally */
-  iframe.fill {
-    width: 460px;
-    height: 258px;
-  }
-}
-
-/*  #Mobile (Portrait) */
-@media only screen and (max-width: 767px) {
-  iframe.fill {
-    width: 300px;
-    height: 168px;
-  }
-}
-
-/* #Mobile (Landscape) */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  iframe.fill {
-    width: 420px;
-    height: 236px;
-  }
+p.caption {
+  font-size: 10px;
+  text-align: right;
+  margin: 0;
 }

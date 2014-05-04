@@ -40,6 +40,10 @@ iframe.fill {
 
 /* Intro */
 
+.intro {
+  text-align: center;
+}
+
 .into h1 {
   font-size: 28px;
 }
@@ -65,12 +69,13 @@ iframe.fill {
   margin: 100px 0;
 }
 
-.project .title,
+.excerpt .title,
 .section .title {
   font-size: 20px;
+  text-align: center;
 }
 
-.project .title a {
+.excerpt .title a {
   text-decoration: none;
 }
 
@@ -78,6 +83,7 @@ iframe.fill {
 
 .summary h2 {
   font-size: 24px;
+  text-align: center;
 }
 
 .section {

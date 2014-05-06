@@ -23,11 +23,11 @@ layout: default
         {{ page.highlight }}
         <p>{{ page.summary }}</p>
 
-        {% if page.source != null &}
+        {% if page.source != null %}
           <p><a href="{{ page.source }}" target="_blank">View source</a></p>
         {% endif %}
 
-        {% if page.download != null &}
+        {% if page.download != null %}
           <p><a href="{{ site.url }}/{{ page.download }}" target="_blank">Download full</a></p>
         {% endif %}
     </div>

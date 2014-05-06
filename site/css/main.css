@@ -23,6 +23,7 @@ html, body {
 .content {
   width: 600px;
   padding: 0 20px;
+  margin: 0 auto;
 }
 
 img.fill {
@@ -34,7 +35,7 @@ img.border {
 }
 
 iframe.fill {
-   width: 580px;
+   width: 560px;
    height: 326px;
 }
 

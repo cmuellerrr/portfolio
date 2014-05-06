@@ -6,6 +6,8 @@
 
 /* General */
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -18,12 +20,36 @@ html, body {
   height: 100%;
   font-family: 'Avenir Next', 'Open Sans', sans-serif;
   font-size: 14px;
+  color: #333333;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h3 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+a {
+  color: #333333;
 }
 
 .content {
   width: 600px;
   padding: 0 20px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 img.fill {
@@ -36,7 +62,7 @@ img.border {
 
 iframe.fill {
    width: 560px;
-   height: 326px;
+   height: 315px;
 }
 
 /* Intro */
@@ -45,28 +71,22 @@ iframe.fill {
   text-align: center;
 }
 
-.into h1 {
-  font-size: 28px;
-}
-
 .intro ul {
-  display: table;
-  width: 100%;
-  list-style: none;
+  padding: 0;
 }
 
 .intro ul li {
-  display: table-cell;
-  text-align: center;
-}
-
-.intro ul li a {
-  display: block;
+  display: inline;
+  margin: 15px;
 }
 
 /* Project List */
 
 .projects {
+  margin: 100px 0;
+}
+
+.excerpt, .section {
   margin: 100px 0;
 }
 
@@ -82,13 +102,9 @@ iframe.fill {
 
 /* Project */
 
-.summary h2 {
-  font-size: 24px;
+.meta {
   text-align: center;
-}
-
-.section {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 p.caption {

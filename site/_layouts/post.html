@@ -3,7 +3,7 @@ layout: default
 ---
 
 <header class="content">
-  <nav><a href="http://www.iammueller.com"><< Home</a></nav>
+  <nav><a href="/"><< Home</a></nav>
 </header>
 
 <div class="content">
@@ -20,7 +20,16 @@ layout: default
     {% endif %}
 
     <div>
-        {{ page.highlight }}
+        {% if page.image != null %}
+          <img class="fill" src="{{ page.image }}">
+        {% endif %}
+        {% if page.vimeo != null %}
+          <iframe class="fill" src="{{ page.vimeo }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        {% endif %}
+        {% if page.youtube != null %}
+          <iframe class="fill" src="{{ page.youtube }}" frameborder="0" allowfullscreen></iframe>
+        {% endif %}
+        
         <p>{{ page.summary }}</p>
 
         {% if page.source != null %}

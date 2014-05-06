@@ -8,7 +8,7 @@ title: Home
     <img id="portrait" src="assets/images/8bitchris.png" alt="this is me"/>
     <h1>Hi. I'm Chris - a <b>designer</b> and <b>developer</b>.</h1>
     <p>I like making things. I also enjoy learning and working with my hands.</p>
-    <p>Currently, I'm designing things at <strong>NASA Ames Research Center</strong> in Mountain View, CA.</p>
+    <p>Currently, I'm designing things at <b>NASA Ames Research Center</b> in Mountain View, CA.</p>
     <ul>      
       <li><a href="http://github.com/cmuellerrr/" target="_blank">github</a></li>
       <li><a href="http://twitter.com/cmuellerrr/" target="_blank">twitter</a></li>
@@ -24,9 +24,18 @@ title: Home
     
       <div class="excerpt">
         <h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        {{ post.highlight }}
-        <!--<img class="fill" src="{{ post.thumbnail }}">-->
-        <p>{{ post.summary }} <span><a href="{{ post.url }}">More >></a></span></p> 
+        
+        {% if post.image != null %}
+          <img class="fill" src="{{ post.image }}">
+        {% endif %}
+        {% if post.vimeo != null %}
+          <iframe class="fill" src="{{ post.vimeo }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        {% endif %}
+        {% if post.youtube != null %}
+          <iframe class="fill" src="{{ post.youtube }}" frameborder="0" allowfullscreen></iframe>
+        {% endif %}
+
+        <p>{{ post.summary }} <span><a href="{{ post.url }}">(Read more)</a></span></p> 
       </div>
     
     {% endfor %}

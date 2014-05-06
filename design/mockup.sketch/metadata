@@ -11,16 +11,16 @@
 	<key>fonts</key>
 	<array>
 		<string>AvenirNext-Medium</string>
+		<string>AvenirNext-Bold</string>
 		<string>AvenirNext-Regular</string>
 		<string>Montserrat-Regular</string>
-		<string>AvenirNext-Bold</string>
 		<string>Montserrat-Bold</string>
 		<string>OpenSans</string>
 		<string>OpenSans-Bold</string>
 		<string>Palatino-Italic</string>
 	</array>
 	<key>length</key>
-	<integer>480254</integer>
+	<integer>448657</integer>
 	<key>version</key>
 	<integer>36</integer>
 </dict>

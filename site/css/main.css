@@ -17,10 +17,13 @@
 }
 
 html, body { 
-  height: 100%;
   font-family: 'Avenir Next', 'Open Sans', sans-serif;
   font-size: 14px;
   color: #333333;
+}
+
+body {
+  padding: 30px 0;
 }
 
 h1 {
@@ -98,6 +101,10 @@ iframe.fill {
 
 .excerpt .title a {
   text-decoration: none;
+}
+
+.jump {
+  font-size: 12px;
 }
 
 /* Project */

@@ -55,6 +55,12 @@ a {
   margin-right: auto;
 }
 
+footer {
+  margin-top: 200px;
+  text-align: center;
+  font-size: 11px;
+}
+
 img.fill {
   width: 100%;
 }
@@ -81,6 +87,10 @@ iframe.fill {
 .intro ul li {
   display: inline;
   margin: 15px;
+}
+
+.portrait {
+  text-align: center;
 }
 
 /* Project List */

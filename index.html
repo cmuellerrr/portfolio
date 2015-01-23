@@ -5,44 +5,29 @@ title: Home
 
 <div class="content">
 
-  <div class="marquee" id="marquee">
-    <h1>Chris<br><span class="last">Mueller</span></h1>
-  </div>
+  <section class="intro">
+    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/nachtmeister/73.jpg" alt="@nachtmeister">
 
-  <div class="intro">
-    <p>Hi. I'm Chris. I'm an interaction designer and software developer.</p>
-    <p>Currently, I'm working at <a href="http://www.nasa.gov/centers/ames/about/overview.html" target="_blank">NASA Ames Research Center</a> in Mountain View, CA.</p>
-    <p>There's more info on me at my <a href="about.html">about</a> page and you can check out some of my previous work below. Feel free to email <a href="mailto:chris@iammueller.com" target="_top">chris@iammueller.com</a> to get in touch.</p>
-
-    <!--
-    <h2>Hi. I'm Chris.</h2>
-    <p>Interaction designer and software developer</p>
+    <h1>Hi. I'm Chris.</h1>
+    <p>Interaction designer and software developer.</p>
     <p>Currently @ <a href="http://www.nasa.gov/centers/ames/about/overview.html" target="_blank">NASA ARC</a> in Mountain View, CA.</p>
-    <p>Check my <a href="about.html">about</a> page and some previous work below. <br> Get in touch via <a href="mailto:chris@iammueller.com" target="_top">chris@iammueller.com</a>.</p>
-    -->
-  </div>
+    <p>Check my <a href="about.html">about</a> page or some case studies below.</p>
+    <p class="contact"><a href="mailto:chris@iammueller.com" target="_top">chris@iammueller.com</a></p>
+  </section>
 
-  <div class="projects">
-    
+  <section class="work clear">
+    <h2>Case Studies</h2>
+
     {% for post in site.posts %}
     
       <div class="excerpt">
-        <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        
-        {% if post.image != null %}
-          <img class="fill" src="{{ post.image }}">
-        {% endif %}
-        {% if post.vimeo != null %}
-          <iframe class="fill" src="{{ post.vimeo }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        {% endif %}
-        {% if post.youtube != null %}
-          <iframe class="fill" src="{{ post.youtube }}" frameborder="0" allowfullscreen></iframe>
-        {% endif %}
-
-        <p>{{ post.summary }} <span class="jump"><a href="{{ post.url }}">(read more)</a></span></p> 
+        <a href="{{ post.url }}">
+          <h3 class="title">{{ post.title }}</h3>
+          <p class="tagline">{{ post.tagline }}</p>
+        </a>
       </div>
     
     {% endfor %}
 
-  </div>  
+  </section>  
 </div>

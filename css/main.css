@@ -11,13 +11,13 @@
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
-html, body { 
+html, body {
+  color: #333;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  color: #333;
 }
 
 h1 {
@@ -42,10 +42,14 @@ a {
   color: #333;
 }
 
+img.round {
+  border-radius: 100px;
+}
+
 .clear:after {
-    clear: both;
-    content: "";
-    display: table;
+  clear: both;
+  display: table;
+  content: "";
 }
 
 /*
@@ -75,6 +79,10 @@ a {
   margin-right: auto;
 }
 
+.lead {
+  margin-top: 100px;
+}
+
 img.fill {
   width: 100%;
 }
@@ -84,8 +92,8 @@ img.border {
 }
 
 iframe.fill {
-   width: 560px;
-   height: 315px;
+  width: 560px;
+  height: 315px;
 }
 
 /* Header */
@@ -98,7 +106,7 @@ header .logo {
   float: left;
   height: 50px;
   width: 50px;
-  
+
   background: #FF6153;
   color: white;
   text-align: center;
@@ -141,24 +149,30 @@ header nav a {
   text-decoration: none;
 }
 
-/* Intro */
+/* About */
 
-.intro {
-  margin-top: 100px;
+.about .lead {
   text-align: center;
 }
 
-.intro img {
-  border-radius: 100px;
+/* Intro */
+
+.home .lead {
+  text-align: center;
 }
 
-.intro p {
+.intro p,
+.intro-abridged p {
   margin: 8px;
 }
 
-.intro .contact {
+.lead .contact {
   margin-top: 20px;
   font-size: 14px;
+}
+
+.intro-abridged {
+    display: none;
 }
 
 /* Excerpts */
@@ -167,7 +181,7 @@ header nav a {
   margin-top: 150px;
 }
 
-.excerpt {  
+.excerpt {
   float: left;
   width: 50%;
   padding: 20px 0;
@@ -186,9 +200,9 @@ header nav a {
   display: block;
   height: 100%;
   width: 100%;
-  
   padding: 20px 10px;
-  /*border: 1px solid #FF6153;*/
+
+  border: 1px solid white;
   text-decoration: none;
 
   -webkit-transition: background .25s;
@@ -209,25 +223,14 @@ header nav a {
 .excerpt .tagline {
   margin: 0;
   font-size: 14px;
-  line-height: 24px
-}
-
-/* About */
-
-.portrait {
-  margin-top: 75px;
-  text-align: center;
-}
-
-.portrait img {
-  border-radius: 100px;
+  line-height: 22px;
 }
 
 /* Project */
 
 .meta {
-  text-align: center;
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .section {
@@ -243,9 +246,9 @@ header nav a {
 }
 
 p.caption {
-  font-size: 10px;
-  text-align: right;
   margin: 0;
+  text-align: right;
+  font-size: 10px;
 }
 
 /* Footer */
@@ -258,11 +261,20 @@ footer {
 
 
 
-/* iPads (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-  
+/* Tablet-ish size */
+@media only screen
+and (max-width : 1024px) {
+
+  .excerpt a {
+    border-color: #FF6153;
+  }
+
+}
+
+/* Phone-ish size */
+@media only screen
+and (max-width : 720px) {
+
   .excerpt {
     float: none;
     width: auto;
@@ -274,10 +286,6 @@ and (max-device-width : 1024px) {
 
   .excerpt:nth-child(even) {
     padding-right: 0;
-  }
-
-  .excerpt a {
-    border: 1px solid #FF6153;
   }
 
   .excerpt .tagline {
@@ -286,59 +294,25 @@ and (max-device-width : 1024px) {
 
 }
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-  
-  .excerpt {
-    float: none;
+/* Breaking content width */
+@media only screen
+and (max-width : 600px) {
+
+  .content {
     width: auto;
-  }
-
-  .excerpt:nth-child(odd) {
-    padding-left: 0;
-  }
-
-  .excerpt:nth-child(even) {
-    padding-right: 0;
-  }
-
-  .excerpt a {
-    border: 1px solid #FF6153;
-  }
-
-  .excerpt .tagline {
-    font-size: 16px;
   }
 
 }
 
+/* Super small */
+@media only screen
+and (max-width : 420px) {
 
-/* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-  
-  .excerpt {
-    float: none;
-    width: auto;
+  .intro {
+    display: none;
   }
 
-  .excerpt:nth-child(odd) {
-    padding-left: 0;
+  .intro-abridged {
+    display: block;
   }
-
-  .excerpt:nth-child(even) {
-    padding-right: 0;
-  }
-
-  .excerpt a {
-    border: 1px solid #FF6153;
-  }
-
-  .excerpt .tagline {
-    font-size: 16px;
-  }
-
 }

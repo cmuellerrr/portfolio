@@ -17,14 +17,14 @@ vimeo: http://player.vimeo.com/video/63447950?byline=0&amp;portrait=0
 ---
 
 <section>
-    <h3>TL;DR</h3>
+    <h2>TL;DR</h2>
     <p>This project dealt with the analysis of human motion data to quantify the difference in how someone throws with their dominant hand as opposed to their non-dominant hand.</p>
 
     <iframe class="fill" src="{{ page.vimeo }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </section>
 
 <section>
-	<h3>Process</h3>
+	<h2>Process</h2>
 	<p>Conceptually, motion capture is pretty simple: use cameras to track distinct joints on a body and build a skeleton around it. The hard part is calibrating the cameras, placing the markers, and cleaning up the data. After we completed the capture and cleanup, the resulting data was analyzed using MATLAB.</p>
 	<img class="fill" src="/assets/images/mocap/suited.jpg"\>
 	<img class="fill" src="/assets/images/mocap/rom.png"\>
@@ -42,7 +42,7 @@ vimeo: http://player.vimeo.com/video/63447950?byline=0&amp;portrait=0
 </section>
 
 <section>
-	<h3>Results</h3>
+	<h2>Results</h2>
 	<p>We hypothesized that either the distance the arm traveled backwards during windup or the smoothness of the arm motion would be a deciding factor in predicting handedness, but neither showed any consistent correlation. Even so, it turns out that the peak velocity of the arm was a pretty good indicator of which hand was dominant; correctly predicting 8 out of 9 subjects.</p>
 	<img class="fill" src="/assets/images/mocap/results.png"\>
 

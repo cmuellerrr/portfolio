@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: projects
+categories: work
 title: "PEER"
 tagline: "A head-mounted procedure viewer for the International Space Station."
 team:
@@ -18,14 +18,14 @@ vimeo: //player.vimeo.com/video/72005257?byline=0&amp;portrait=0
 ---
 
 <section>
-    <h3>TL;DR</h3>
+    <h2>TL;DR</h2>
     <p>Astronauts on the International Space Station (ISS) follow procedures for everything. Those procedures, and the mechanism for viewing them, aren't great. As a graduate project working with the NASA Ames Research Center, we built a head-mounted procedure viewer prototype in order to address some of the issues with crew member efficiency. Prototyping a head-mounted display sucks.</p>
 
     <iframe class="fill" src="{{ page.vimeo }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </section>
 
 <section>
-    <h3>The briefing</h3>
+    <h2>The briefing</h2>
     <p>Crew members on the ISS spend most of their time carrying out scientific research. For each research task, they must follow a rigid, complex procedure. The procedures, and the way they are used, cause a considerable reduction in efficiency; procedures are static text documents and are only viewable on wall-mounted laptops throughout the station.</p>
 
     <div class="figure">
@@ -39,7 +39,7 @@ vimeo: //player.vimeo.com/video/72005257?byline=0&amp;portrait=0
 </section>
 
 <section>
-    <h3>Building domain knowledge</h3>
+    <h2>Building domain knowledge</h2>
     <p>A lot of the time, designers have some background knowledge of the domain they are designing for. That's not really the case with it comes to working on a space station. So to better inform our approach, we started with a literature review on topics like the psychology of spaceflight, the structure of the ISS, and the cognitive processing of tasks.</p>
 
     <!--
@@ -63,10 +63,10 @@ vimeo: //player.vimeo.com/video/72005257?byline=0&amp;portrait=0
 </section>
 
 <section>
-    <h3>Unreachable users</h3>
+    <h2>Unreachable users</h2>
     <p>Designing tools for astronauts has a unique constraint in that you will never be able to do contextual research due to the prohibitive cost of sending designers to space. So, we had to make due by talking to anyone we could get our hands on.</p>
 
-    <p>We interviewed NASA experts within organizations like Operations Planning, Payload Science, and Wearable Computing to build up even more domain knowledge. We were also extremely fortunate to interview two astronauts with mission experience - one retired and one less than 6 months removed from commanding the ISS<sup><a href="#fn1" id="ref1">1</a></sup>.</p>
+    <p>We interviewed NASA experts within organizations like Operations Planning, Payload Science, and Wearable Computing to build up even more domain knowledge. We were also extremely fortunate to interview two astronauts with mission experience - one retired and one less than 6 months removed from commanding the ISS<sup><a id="ref1" href="#fn1" title="Jump to footnote.">1</a></sup>.</p>
 
     <div class="figure">
         <p class="quote">If they looked at the procedure and saw that it was 20 pages long, literally, they'd be like, 'It's going to take me longer to read the procedure than to just do what I need to do.'</p>
@@ -79,13 +79,11 @@ vimeo: //player.vimeo.com/video/72005257?byline=0&amp;portrait=0
         <img class="fill" src="/assets/images/novo/card_mapping.jpg"\>
         <p class="caption">We asked commercial pilots to visualize their workflow through a card mapping excercise.</p>
     </div>
-
-    <sup id="fn1">1. Seriously, astronaut time is so valuable that being able to snag an hour was a huge win.<a href="#ref1" title="Jump back to footnote in the text.">&#8617;</a></sup>
 </section>
 
 
 <section>
-    <h3>Extracting insights and visioning a solution</h3>
+    <h2>Extracting insights and visioning a solution</h2>
     <p>Naturally, we synthesized our research through affinity diagrams (one domain-specific and one for analogous domains) and various other models (e.g. cultural, sequence, artifact). From this, we extracted eight key issues to address:</p>
 
     <ul>
@@ -104,18 +102,16 @@ vimeo: //player.vimeo.com/video/72005257?byline=0&amp;portrait=0
         <p class="caption">So many notes. Our visioning sessions resulted in over 400 individual ideas.</p>
     </div>
 
-    <p>After several visioning sessions and activities, we narrowed down our vision to utilizing a head-mounted display<sup><a href="#fn2" id="ref2">2</a></sup>. The HMD would allow for hands-free interaction through voice interaction and leverage augmented-reality (AR) to provide information in place within a crew's work environment. We set off to start building.</p>
+    <p>After several visioning sessions and activities, we narrowed down our vision to utilizing a head-mounted display<sup><a id="ref2" href="#fn2" title="Jump to footnote.">2</a></sup>. The HMD would allow for hands-free interaction through voice interaction and leverage augmented-reality (AR) to provide information in place within a crew's work environment. We set off to start building.</p>
 
     <div class="figure">
         <img class="fill" src="/assets/images/novo/rejected_vision.png"\>
         <p class="caption">One of our rejected visions had the crew using a wrist-worn device along with a tablet.</p>
     </div>
-
-    <sup id="fn2">2. While not only addressing many of the issues found, this project provided an opportunity to explore the feasibility of HMDs in a 0G environment.<a href="#ref2" title="Jump back to footnote in the text.">&#8617;</a></sup>
 </section>
 
 <section>
-    <h3>Prototyping an HMD</h3>
+    <h2>Prototyping an HMD</h2>
     <p>Lo-fidelity testing, rapid iteration, available hardware - these are all things imperative to prototyping. These are also all things that HMDs utterly fail at. Basically, if you want to test an application on an HMD, you have to build it. That is dumb. So, we had to find a way to quickly iterate and get feedback without building out functional software each time.</p>
 
     <div class="figure">
@@ -123,7 +119,7 @@ vimeo: //player.vimeo.com/video/72005257?byline=0&amp;portrait=0
         <p class="caption">We tested by having users run through a pretend procedure in our mockup space station.</p>
     </div>
 
-    <p>Gordon and I ended up building a prototyping tool that would let us use the actual HMD in tests but would display our wireframes instead of working software<sup><a href="#fn3" id="ref3">3</a></sup>. This allowed us to test six iterations within a few weeks.</p>
+    <p>Gordon and I ended up building a prototyping tool that would let us use the actual HMD in tests but would display our wireframes instead of working software<sup><a id="ref3" href="#fn3" title="Jump to footnote.">3</a></sup>. This allowed us to test six iterations within a few weeks.</p>
 
     <p>The final version was designed to have a pretty simple, linear structure (while allowing users to jump to anywhere if desired). It splits steps into individual screens and provides in-context information and AR overlays to address the verbosity of current procedures.</p>
 
@@ -136,12 +132,10 @@ vimeo: //player.vimeo.com/video/72005257?byline=0&amp;portrait=0
         <img class="fill" src="/assets/images/novo/peer_ui.png"\>
         <p class="caption">A view of the prototype's interface from a user's perspective.</p>
     </div>
-
-    <sup id="fn3">3. A moderator would sit at a computer during a test and serve static images to the HMD based on commands spoken by the tester.<a href="#ref3" title="Jump back to footnote in the text.">&#8617;</a></sup>
 </section>
 
 <section>
-    <h3>Hardware limitations</h3>
+    <h2>Hardware limitations</h2>
     <p>For hardware, we chose to use the Epson Moverio due to it being one of the few available HMDs and its Affordability compared to the rest of the market. The down side is that the Moverio doesn't have any external sensors, so again we had to find a way to get what we needed. We ended up pairing the Moverio with a tablet to process all voice commands and handle the AR. The tablet then relayed what to display to the HMD. While not pretty - or ideal - it got the job done.</p>
 
     <div class="figure">
@@ -151,10 +145,15 @@ vimeo: //player.vimeo.com/video/72005257?byline=0&amp;portrait=0
 </section>
 
 <section>
-    <h3>What we learned</h3>
-    <p>The final prototype was well received; gaining high marks in our final readiness test. I believe we also succeeded in exploring if an HMD is worth pursuing in the future. I think that it is, but the hardware just isn't ready yet<sup><a href="#fn4" id="ref4">4</a></sup>.</p>
+    <h2>What we learned</h2>
+    <p>The final prototype was well received; gaining high marks in our final readiness test. I believe we also succeeded in exploring if an HMD is worth pursuing in the future. I think that it is, but the hardware just isn't ready yet<sup><a id="ref4" href="#fn4" title="Jump to footnote.">4</a></sup>.</p>
 
     <p>If you want to know more about the project, you can get additional information at <a href="{{ page.site }}" target="_blank">our project website</a>. The code for the final prototype, as well as our prototyping tools, is available on <a href="{{ page.repo }}" target="_blank">github</a>.</p>
+</section>
 
-    <sup id="fn4">4. Most are unavailable, prohibitively expense, or not advanced enough to be useful.<a href="#ref4" title="Jump back to footnote in the text.">&#8617;</a></sup>
+<section class="footnotes">
+    <p><sup id="fn1">1. Seriously, astronaut time is so valuable that being able to snag an hour was a huge win.<a href="#ref1" title="Jump to reference in the text.">&#8617;</a></sup></p>
+    <p><sup id="fn2">2. While not only addressing many of the issues found, this project provided an opportunity to explore the feasibility of HMDs in a 0G environment.<a href="#ref2" title="Jump to reference in the text.">&#8617;</a></sup></p>
+    <p><sup id="fn3">3. A moderator would sit at a computer during a test and serve static images to the HMD based on commands spoken by the tester.<a href="#ref3" title="Jump to reference in the text.">&#8617;</a></sup></p>
+    <p><sup id="fn4">4. Most are unavailable, prohibitively expense, or not advanced enough to be useful.<a href="#ref4" title="Jump to reference in the text.">&#8617;</a></sup></p>
 </section>

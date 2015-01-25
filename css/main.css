@@ -39,7 +39,7 @@ h3 {
 }
 
 a {
-  color: #333;
+  color: inherit;
 }
 
 img.round {
@@ -233,22 +233,34 @@ header nav a {
   text-align: center;
 }
 
-.section {
+.project section {
   margin: 100px 0;
 }
 
-.section .title {
-  text-align: center;
+.figure {
+  margin: 50px 0;
 }
 
-.summary {
-  margin-top: 80px;
-}
-
-p.caption {
+.figure .caption {
   margin: 0;
+  font-size: 12px;
+}
+
+.figure .quote,
+.figure .attribution {
+  margin: 5px 25px;
+  font-family: "Permanent Marker";
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.figure .attribution {
   text-align: right;
-  font-size: 10px;
+}
+
+sup a {
+  color: #FF6153;
+  text-decoration: none;
 }
 
 /* Footer */

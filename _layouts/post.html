@@ -2,19 +2,21 @@
 layout: default
 ---
 
-<div class="content">
-  <div class="summary">
+<div class="content project">
+
+  <section class="lead">
     <h2>{{ page.title }}</h2>
 
     {% if page.team != null %}
       <p class="meta">
-        Team: 
+        Team:
         {% for t in page.team %}
           {{ t }}{% if forloop.last == false %},{% endif %}
         {% endfor %}
       </p>
     {% endif %}
 
+  <!--
     <div>
         {% if page.image != null %}
           <img class="fill" src="{{ page.image }}">
@@ -25,7 +27,7 @@ layout: default
         {% if page.youtube != null %}
           <iframe class="fill" src="{{ page.youtube }}" frameborder="0" allowfullscreen></iframe>
         {% endif %}
-        
+
         <p>{{ page.summary }}</p>
 
         {% if page.source != null %}
@@ -36,10 +38,9 @@ layout: default
           <p><a href="{{ site.url }}/{{ page.download }}" target="_blank">Download full</a></p>
         {% endif %}
     </div>
-  </div>
-  
-  <div>
-    {{ content }}
-  </div>
+  -->
+  </section>
+
+  {{ content }}
 
 </div>

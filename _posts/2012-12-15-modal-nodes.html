@@ -15,59 +15,92 @@ vimeo: http://player.vimeo.com/video/69808942?byline=0&amp;portrait=0
 
 <section>
     <h2>TL;DR</h2>
-    <p>Modal Nodes is a large-scale music sequencer which uses the Microsoft Kinect to gather all input. In the environment, users are able to place nodes on the screen to produce atmospheric musical sequences.</p>
+    <p>We wanted to make an interactive art installation. We also wanted to do some research on large-scale motion control. The result was a large-scale music sequencer which uses the Microsoft Kinect to gather all input. Predictably, our research showed that different types of motion control interactions are good for different purposes.</p>
 
-    <iframe class="fill" src="{{ page.vimeo }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<div class="figure">
+	    <iframe class="fill" src="{{ page.vimeo }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	</div>
 </section>
 
 <section>
 	<h2>Concept</h2>
-	<p>In Modal Nodes, user-created nodes act as musical notes which are placed around the virtual environment. Their X position dictates when they are played, while their Y position determines their tone. Additionally, a node's Z position alters its diameter, which allows for fine-tuned timing.</p>
-	<img class="fill" src="/assets/images/modal_nodes/diagram.png"\>
-	<img class="fill" src="/assets/images/modal_nodes/ex1.png"\>
-	<img class="fill" src="/assets/images/modal_nodes/ex2.png"\>
-	<img class="fill" src="/assets/images/modal_nodes/ex3.png"\>
+	<p>Charles and I had an idea for a project that would scratch our itch for making an interactive art installation as well as have some academic value. The concept was that users control a giant music sequencer through motion as ready by a Kinect. Users create musical "nodes" and place around the virtual environment; their 3D coordinates would determine tone and timing. Additionally, we would use this as an opportunity to research different methods of large-scale motion control. We would call the project Modal Nodes<sup><a id="ref1" href="#fn1" title="Jump to footnote.">1</a>.</p>
+
+	<div class="figure">
+		<img class="fill" src="/assets/images/modal_nodes/diagram.png"\>
+		<p class="caption">We used concept diagrams like this to get an idea of how to scale the project.</p>
+	</div>
 </section>
 
 <section>
 	<h2>Pose vs Gesture</h2>
-	<p>A goal of this project was to test differences between gesture-based (movement over time) and pose-based (static) interactions. Through several user testing sessions, we found that gestures had good affordance yet caused higher levels of fatigue while poses were easily performed but had low discoverability. We decided to use a combination of both to optimize the experience.</p>
-	<img class="fill" src="/assets/images/modal_nodes/pose_v_gesture.png"\>
+	<p>One aspect of testing was to see the differences between gesture-based (movement over time) and pose-based (static) interactions. We set up user testing sessions which varied poses and gestures for different interactions. Through observation and retrospective interviews, we found a few key differences.</p>
+
+	<div class="figure">
+		<img class="fill" src="/assets/images/modal_nodes/pose_v_gesture.png"\>
+		<p class="caption">Poses and gestures each had strengths that catered to different types of interactions.</p>
+	</div>
+
+	<p>Gestures:</p>
+	<ul>
+		<li>Higher affordance</li>
+		<li>Natural connection to the resulting action</li>
+		<li>Fatiguing</li>
+		<li>Lower success rate (users performs gesture incorrectly)</li>
+	</ul>
+
+	<p>Poses:</p>
+	<ul>
+		<li>Low affordance</li>
+		<li>Easily performed</li>
+		<li>Highly repeatable</li>
+	</ul>
+
+	<p>We decided to use a combination of poses and gestures to leverage their strengths depending on the situation. Broad, easily performed gestures would be used for interactions that didn't require great precision, and poses would be used for quick, repeatable actions.</p>
 </section>
 
 <section>
 	<h2>Affordances</h2>
-	<p>With walk-up-and-use being a necessity, we needed to make sure that the interactions were both intuitive and easy to perform. One way we accomplish this is by having the environment react as a user begins to complete an action.</p>
+	<p>Being a public installation, we wanted it to be usable without instruction. So, we needed to make sure that the interactions we chose were both intuitive and easy to perform. One way we accomplish this is by having the environment react as a user begins to complete an action.</p>
 
-	<p>For example, when users begin the process of creating a node, the normally ambient particles move away from the background and swarm around a user’s hands – the closer a user is to completing the action, the tighter and faster the particles swarmed (as shown in an exaggerated form here).</p>
-	<img class="fill" src="/assets/images/modal_nodes/swarm_1.png"\>
-	<img class="fill" src="/assets/images/modal_nodes/swarm_2.png"\>
-	<img class="fill" src="/assets/images/modal_nodes/swarm_3.png"\>
+	<p>For example, when users begin the process of creating a node, the normally ambient particles move away from the background and swarm around a user’s hands – the closer a user is to completing the action, the tighter and faster the particles swarmed (as shown in an exaggerated form below). When the action is complete, the particles turn into a node.</p>
+
+	<div class="figure">
+		<img class="fill" src="/assets/images/modal_nodes/swarm_1.png"\>
+		<img class="fill" src="/assets/images/modal_nodes/swarm_2.png"\>
+		<img class="fill" src="/assets/images/modal_nodes/swarm_3.png"\>
+		<p class="caption">Swarming particles is one way we provide gesture affordance.</p>
+	</div>
 </section>
 
 <section>
-	<h2>Audio</h2>
-	<p>We also placed a significant emphasis on ensuring that the resulting audio sequence is pleasant in every case. We got this by utilizing a fairly long echo effect which allows the tones to blend together nicely and by staying away from sharp, abrasive tones.</p>
+	<h2>Minimizing chaos</h2>
+	<p>Interactive audio projects like this are very easy to screw up because the users are in control, and most people aren't very good musicians. If you get a bunch of people in front of a screen where their movement creates sound, they are going to explore and make a bunch of noise. Then multiply that by n people and you probably get chaos. We needed to restrain that chaos so it didn't sound so...chaotic.</p>
+
+	<div class="figure">
+		<img class="fill" src="/assets/images/modal_nodes/ex3.png"\>
+		<p class="caption">Groups interacting and the same time leads to some interesting (and great) sounds.</p>
+	</div>
+
+	<p>I like to think of it like this: imagine the resulting noise like a waveform - plotting the tone on the y-axis over time. If you are moving between sharp, distinct tones, you'll have sharp edges in that waveform. While the tones will be more distinct, it has a greater chance to sound chaotic because the y value is fluctuating wildly. If you smooth those edges and stretch it out, then the resulting noise will blend together and be less abrasive<sup><a id="ref2" href="#fn2" title="Jump to footnote.">2</a></sup>.</p>
+
+	<div class="figure">
+		<img class="fill" src="/assets/images/modal_nodes/waveform.png"\>
+		<p class="caption">Visualizing my weird way of saying that we want it to sound good.</p>
+	</div>
+
+	<p>We approached this problem by first limiting the range of tones that users could create (reducing the possible delta). We then added a long, pulsing echo effect to blend the notes together (reducing the sharpness at each vertex). The result is an output that is expressive enough for users to see variation but is constrained enough that it doesn't punish experimentation.</p>
 </section>
 
-<!--
-<section class="section row">
-	<div class="five columns">
-		<h2 class="title">Setup</h2>
-		<p>Modal Nodes was designed to be a public installation. Specifically, we wanted to create something that utilized a lot of space - like having the screen take up the entire side of a building while a group of up to 10 people interacted below. Unfortunately, spacial constraints limited our initial testing to about 4 users.</p>
-	</div>
-	<div class="ten columns offset-by-one">
-	</div>
-</section>
--->
+<section>
+	<h2>Future improvements</h2>
+	<p>We're pleased with our result, but we feel it isn't quite where we want it. The interactions are not yet at a level in which the application could stand alone without some sort of instruction. Furthermore, we seek to improve the system's audio processing capabilities. Providing additional audio effects, either by having nodes interact with each other or through alteration of the nodes themselves, would give users even more to experiment with.</p>
 
-<!--
-<section class="section row">
-	<div class="five columns">
-		<h3 class="title">Improvements</h3>
-		<p>Although pleased with our current implementation, we feel that our visualizations and interactions have not been fully realized. The interactions are not yet at a level in which the application could be used by a new user without some sort of instruction.  Furthermore, we seek to improve upon the audio processing capabilities of the system. Providing additional audio effects, either by having nodes interact with each other or through alteration of the nodes themselves, would provide further avenues for users to explore.</p>
-	</div>
-	<div class="ten columns offset-by-one">
-	</div>
+	<p>Modal Nodes was designed to be a grand, public installation that utilized a lot of space - like having the screen take up the entire side of a building while a group of up to 10 people interacted below. In the future we'd like to make this thing <em>gigantic</em>.</p>
 </section>
--->
+
+<section class="footnotes">
+	<p><sup id="fn1">1. Raise your hand if you knew the name was a reference to the <a href="http://en.wikipedia.org/wiki/Figrin_D%27an_and_the_Modal_Nodes">cantina band</a>.</sup></p>
+
+    <p><sup id="fn2">2. I'm sure there is a proper way to describe what I'm talking about, but this makes sense to me.<a href="#ref2" title="Jump to reference in the text.">&#8617;</a></sup></p>
+</section>

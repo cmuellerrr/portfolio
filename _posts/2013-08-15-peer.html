@@ -14,7 +14,6 @@ role: Technical lead. While we take part in all aspects of the project, I am in 
 tools: Java, Android, Processing, Adobe Illustrator
 repo: https://www.github.com/cmuellerrr/PEER
 site: http://www.hcii.cmu.edu/M-HCI/2013/novo/
-vimeo: //player.vimeo.com/video/72005257?byline=0&amp;portrait=0
 ---
 
 <section>
@@ -22,7 +21,9 @@ vimeo: //player.vimeo.com/video/72005257?byline=0&amp;portrait=0
     <p>Astronauts on the International Space Station (ISS) follow procedures for everything. Those procedures, and the mechanism for viewing them, aren't great. As a graduate project working with the NASA Ames Research Center, we built a head-mounted procedure viewer prototype in order to address some of the issues with crew member efficiency. Prototyping a head-mounted display sucks.</p>
 
     <div class="figure">
-        <iframe class="fill" src="{{ page.vimeo }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <div class="videoWrapper">
+            <iframe src="//player.vimeo.com/video/72005257?byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
     </div>
 </section>
 
@@ -31,7 +32,7 @@ vimeo: //player.vimeo.com/video/72005257?byline=0&amp;portrait=0
     <p>Crew members on the ISS spend most of their time carrying out scientific research. For each research task, they must follow a rigid, complex procedure. The procedures, and the way they are used, cause a considerable reduction in efficiency; procedures are static text documents and are only viewable on wall-mounted laptops throughout the station.</p>
 
     <div class="figure">
-        <img class="fill" src="/assets/images/peer/iss_interior.jpg"\>
+        <img src="/assets/images/peer/iss_interior.jpg"\>
         <p class="caption">The ISS isn't exactly simple, or tidy, or easy to work with, etc. Image courtesy of NASA</p>
     </div>
 
@@ -70,15 +71,15 @@ vimeo: //player.vimeo.com/video/72005257?byline=0&amp;portrait=0
 
     <p>We interviewed NASA experts within organizations like Operations Planning, Payload Science, and Wearable Computing to build up even more domain knowledge. We were also extremely fortunate to interview two astronauts with mission experience - one retired and one less than 6 months removed from commanding the ISS<sup><a id="ref1" href="#fn1" title="Jump to footnote.">1</a></sup>.</p>
 
-    <div class="figure">
-        <p class="quote">If they looked at the procedure and saw that it was 20 pages long, literally, they'd be like, 'It's going to take me longer to read the procedure than to just do what I need to do.'</p>
+    <div class="quote">
+        <p>If they looked at the procedure and saw that it was 20 pages long, literally, they'd be like, 'It's going to take me longer to read the procedure than to just do what I need to do.'</p>
         <p class="attribution">- Procedure writer</p>
     </div>
 
     <p>Since we couldn't research our end users in context, we went on a nation-wide search to perform contextual research with individuals whose work was similar to the ISS crew in some way. We met with commercial pilots, deep sea divers, lab technicians, paramedics, construction managers, and pit crews based on the similarities their tasks shared with payload science and maintenance work.</p>
 
     <div class="figure">
-        <img class="fill" src="/assets/images/peer/card_mapping.jpg"\>
+        <img src="/assets/images/peer/card_mapping.jpg"\>
         <p class="caption">We asked commercial pilots to visualize their workflow through a card mapping excercise.</p>
     </div>
 </section>
@@ -100,14 +101,14 @@ vimeo: //player.vimeo.com/video/72005257?byline=0&amp;portrait=0
     </ul>
 
     <div class="figure">
-        <img class="fill" src="/assets/images/peer/visioning.jpg"\>
+        <img src="/assets/images/peer/visioning.jpg"\>
         <p class="caption">So many notes. Our visioning sessions resulted in over 400 individual ideas.</p>
     </div>
 
     <p>After several visioning sessions and activities, we narrowed down our vision to one utilizing a head-mounted display<sup><a id="ref2" href="#fn2" title="Jump to footnote.">2</a></sup>. The HMD would allow for hands-free interaction through voice interaction and leverage augmented-reality (AR) to provide information in place within a crew's work environment. We set off to start building.</p>
 
     <div class="figure">
-        <img class="fill" src="/assets/images/peer/rejected_vision.png"\>
+        <img src="/assets/images/peer/rejected_vision.png"\>
         <p class="caption">One of our rejected visions had the crew using a wrist-worn device along with a tablet.</p>
     </div>
 </section>
@@ -117,7 +118,7 @@ vimeo: //player.vimeo.com/video/72005257?byline=0&amp;portrait=0
     <p>Lo-fidelity testing, rapid iteration, available hardware - these are all things imperative to prototyping. These are also all things that HMDs utterly fail at. Basically, if you want to test an application on an HMD, you have to build it. That is dumb. So, we had to find a way to quickly iterate and get feedback without building out functional software each time.</p>
 
     <div class="figure">
-        <img class="fill" src="/assets/images/peer/testing_room.png"\>
+        <img src="/assets/images/peer/testing_room.png"\>
         <p class="caption">We tested by having users run through a pretend procedure in our mockup space station.</p>
     </div>
 
@@ -126,12 +127,12 @@ vimeo: //player.vimeo.com/video/72005257?byline=0&amp;portrait=0
     <p>The final version was designed to have a pretty simple, linear structure (while allowing users to jump to anywhere if desired). It splits steps into individual screens and provides in-context information and AR overlays to address the verbosity of current procedures.</p>
 
     <div class="figure">
-        <img class="fill" src="/assets/images/peer/ui_map.png"\>
+        <img src="/assets/images/peer/ui_map.png"\>
         <p class="caption">A map of the prototype UI. Procedures are viewed linearly, but users can access other features through a menu.</p>
     </div>
 
     <div class="figure">
-        <img class="fill" src="/assets/images/peer/peer_ui.png"\>
+        <img src="/assets/images/peer/peer_ui.png"\>
         <p class="caption">A view of the prototype's interface from a user's perspective.</p>
     </div>
 </section>
@@ -141,7 +142,7 @@ vimeo: //player.vimeo.com/video/72005257?byline=0&amp;portrait=0
     <p>For hardware, we chose to use the Epson Moverio due to it being one of the few available HMDs and its Affordability compared to the rest of the market. The down side is that the Moverio doesn't have any external sensors, so again we had to find a way to get what we needed. We ended up pairing the Moverio with a tablet to process all voice commands and handle the AR. The tablet then relayed what to display to the HMD. While not pretty - or ideal - it got the job done.</p>
 
     <div class="figure">
-        <img class="fill" src="/assets/images/peer/the_future.jpg"\>
+        <img src="/assets/images/peer/the_future.jpg"\>
         <p class="caption">The only time it ever looked kind of cool.</p>
     </div>
 </section>

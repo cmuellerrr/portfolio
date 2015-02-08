@@ -277,9 +277,14 @@ footer {
   font-size: 14px;
 }
 
-.figure {
+.figure,
+.quote {
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+.figure img {
+  width: 100%;
 }
 
 .figure .caption {
@@ -287,8 +292,7 @@ footer {
   font-size: 13px;
 }
 
-.figure .quote,
-.figure .attribution {
+.quote {
   margin-left: 25px;
   margin-right: 25px;
 
@@ -296,7 +300,7 @@ footer {
   font-size: 20px;
 }
 
-.figure .attribution {
+.quote .attribution {
   text-align: right;
 }
 
@@ -321,17 +325,23 @@ img.round {
   border-radius: 100px;
 }
 
-img.fill {
-  width: 100%;
-}
-
 img.border {
   border: 1px solid #e3e3e3;
 }
 
-iframe.fill {
-  width: 560px;
-  height: 315px;
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 

@@ -2,6 +2,7 @@
 layout: post
 categories: work
 title: "Modal Nodes"
+type: "Installation"
 tagline: "Using human motion to control a large-scale music sequencer."
 team:
   - <a href="http://www.cka.co" target="_blank">Charles Aweida</a>
@@ -25,7 +26,7 @@ repo: https://www.github.com/cmuellerrr/modal-nodes
 
 <section>
 	<h2>The concept</h2>
-	<p>Charles and I had an idea for a project that would scratch our itch for making an interactive art installation as well as have some academic value. The concept was that users control a giant music sequencer through motion as ready by a Kinect. Users create musical "nodes" and place around the virtual environment; their 3D coordinates would determine tone and timing. Additionally, we would use this as an opportunity to research different methods of large-scale motion control. We would call the project Modal Nodes<sup><a id="ref1" href="#fn1" title="Jump to footnote.">1</a>.</p>
+	<p>Charles and I had an idea for a project that would scratch our itch for making an interactive art installation as well as have some academic value. The concept was for people to control a giant music sequencer through motion as ready by a Kinect. Users create musical "nodes" to place around the virtual environment; their 3D coordinates would determine tone and timing. Additionally, we would use this as an opportunity to research different methods of large-scale motion control. We would call the project Modal Nodes<sup><a id="ref1" href="#fn1" title="Jump to footnote.">1</a>.</p>
 
 	<div class="figure">
 		<img src="/assets/images/modal_nodes/diagram.png"\>
@@ -38,7 +39,7 @@ repo: https://www.github.com/cmuellerrr/modal-nodes
 	<p>One aspect of testing was to see the differences between gesture-based (movement over time) and pose-based (static) interactions. We set up user testing sessions which varied poses and gestures for different interactions. Through observation and retrospective interviews, we found a few key differences.</p>
 
 	<div class="figure">
-		<img src="/assets/images/modal_nodes/pose_v_gesture.png"\>
+		<img src="/assets/images/modal_nodes/pose_gesture.png"\>
 		<p class="caption">Poses and gestures each had strengths that catered to different types of interactions.</p>
 	</div>
 
@@ -87,7 +88,7 @@ repo: https://www.github.com/cmuellerrr/modal-nodes
 
 	<div class="figure">
 		<img src="/assets/images/modal_nodes/waveform.png"\>
-		<p class="caption">You can visualize it like this. What I'm trying to say is that we want it to sound good.</p>
+		<p class="caption">Pseudoscience at its finest. What I'm trying to say is that we want it to sound good.</p>
 	</div>
 
 	<p>We approached this problem by first limiting the range of tones that users could create (reducing the possible delta). We then added a long, pulsing echo effect to blend the notes together (reducing the sharpness at each vertex). The result is an output that is expressive enough for users to see variation but is constrained enough that it doesn't punish experimentation.</p>

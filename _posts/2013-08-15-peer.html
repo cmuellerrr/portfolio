@@ -2,7 +2,8 @@
 layout: post
 categories: work
 title: "PEER"
-tagline: "A head-mounted procedure viewer for the International Space Station."
+type: "Prototype"
+tagline: "Building a head-mounted procedure viewer for the International Space Station."
 team:
   - <a href="http://www.stephentrahan.com" target="_blank">Stephen Trahan</a>
   - <a href="http://www.jntran.com" target="_blank">Jenn Tran</a>
@@ -43,7 +44,7 @@ site: http://www.hcii.cmu.edu/M-HCI/2013/novo/
 
 <section>
     <h2>Building domain knowledge</h2>
-    <p>A lot of the time, designers have some background knowledge of the domain they are designing for. That's not really the case with it comes to working on a space station. So to better inform our approach, we started with a literature review on topics like the psychology of spaceflight, the structure of the ISS, and the cognitive processing of tasks.</p>
+    <p>A lot of the time, designers have some background knowledge of the domain they are designing for. That's not really the case when it comes to working on a space station. So to better inform our approach, we started with a literature review on topics like the psychology of spaceflight, the structure of the ISS, and the cognitive processing of tasks.</p>
 
     <!--
     <ul>
@@ -54,7 +55,7 @@ site: http://www.hcii.cmu.edu/M-HCI/2013/novo/
     </ul>
     -->
 
-    <p>We paired the literature review with a competitive analysis of other procedure-like tools such as medical procedure viewers, websites like Instructables.com, as well as the viewer currently in use on the ISS. Here, we focused on portability, rich media, customization, contextual awareness, and tool retrieval. Our analysis led us to the a few recommendations:</p>
+    <p>We paired the literature review with a competitive analysis of other procedure-like tools such as medical procedure viewers, websites like Instructables.com, as well as the viewer currently in use on the ISS. Here, we focused on portability, rich media, customization, contextual awareness, and tool retrieval. Our analysis led us to a few recommendations:</p>
 
     <ul>
         <li>Consider wearable computing and voice control as options for portable, hands-free procedure viewing.</li>
@@ -76,7 +77,7 @@ site: http://www.hcii.cmu.edu/M-HCI/2013/novo/
         <p class="attribution">- Procedure writer</p>
     </div>
 
-    <p>Since we couldn't research our end users in context, we went on a nation-wide search to perform contextual research with individuals whose work was similar to the ISS crew in some way. We met with commercial pilots, deep sea divers, lab technicians, paramedics, construction managers, and pit crews based on the similarities their tasks shared with payload science and maintenance work.</p>
+    <p>Since we couldn't research our end users in context, we went on a nation-wide search to perform contextual research with individuals whose work was similar to the ISS crew in some way. We met with commercial pilots, deep sea divers, lab technicians, paramedics, construction managers, and pit crews based on similarities their tasks shared with payload science and maintenance work.</p>
 
     <div class="figure">
         <img src="/assets/images/peer/card_mapping.jpg"\>
@@ -87,17 +88,17 @@ site: http://www.hcii.cmu.edu/M-HCI/2013/novo/
 
 <section>
     <h2>Extracting insights and visioning</h2>
-    <p>Naturally, we synthesized our research through affinity diagrams (one domain-specific and one for analogous domains) and various other models (e.g. cultural, sequence, artifact). From this, we extracted eight key issues to address:</p>
+    <p>Naturally, we synthesized our research through affinity diagrams (one domain-specific and one for analogous domains) and various other models (i.e. cultural, sequence, artifact). From this, we extracted eight key issues to address:</p>
 
     <ul>
-        <li><b>Portability</b> - Crew need to move around to complete tasks, but the procedure viewer is attached to a wall.</li>
-        <li><b>Annotations</b> - Crew sometimes print out procedures to write on them instead of using the digital annotation feature.</li>
-        <li><b>Hands-free</b> - Hands are needed to both navigate procedures and perform tasks simultaneously.</li>
-        <li><b>Brevity</b> - Procedures are always displayed in full, but that's not always necessary.</li>
-        <li><b>Visualization</b> - Current procedures are mostly text.</li>
-        <li><b>Autonomy</b> - Crew aren't given to opportunity to be very autonomous, which will be critical to missions far from Earth.</li>
-        <li><b>Training</b> - Training is focused on tasks rather than the underlying skills.</li>
-        <li><b>Stowage</b> - Crew members spend a significant amount of time trying to find tools.</li>
+        <li><b>Portability</b> &mdash; Crew need to move around to complete tasks, but the procedure viewer is attached to a wall.</li>
+        <li><b>Annotations</b> &mdash; Crew sometimes print out procedures to write on them instead of using the digital annotation feature.</li>
+        <li><b>Hands-free</b> &mdash; Hands are needed to both navigate procedures and perform tasks simultaneously.</li>
+        <li><b>Brevity</b> &mdash; Procedures are always displayed in full, but that's not always necessary.</li>
+        <li><b>Visualization</b> &mdash; Current procedures are mostly text.</li>
+        <li><b>Autonomy</b> &mdash; Crew aren't given to opportunity to be very autonomous, which will be critical to missions far from Earth.</li>
+        <li><b>Training</b> &mdash; Training is focused on tasks rather than the underlying skills.</li>
+        <li><b>Stowage</b> &mdash; Crew members spend a significant amount of time trying to find tools.</li>
     </ul>
 
     <div class="figure">
@@ -105,7 +106,7 @@ site: http://www.hcii.cmu.edu/M-HCI/2013/novo/
         <p class="caption">So many notes. Our visioning sessions resulted in over 400 individual ideas.</p>
     </div>
 
-    <p>After several visioning sessions and activities, we narrowed down our vision to one utilizing a head-mounted display<sup><a id="ref2" href="#fn2" title="Jump to footnote.">2</a></sup>. The HMD would allow for hands-free interaction through voice interaction and leverage augmented-reality (AR) to provide information in place within a crew's work environment. We set off to start building.</p>
+    <p>After several visioning sessions and activities, we narrowed down our vision to one utilizing a head-mounted display<sup><a id="ref2" href="#fn2" title="Jump to footnote.">2</a></sup>. The HMD would allow for hands-free interaction through voice interaction and leverage augmented-reality (AR) to provide information in context within a crew's work environment.</p>
 
     <div class="figure">
         <img src="/assets/images/peer/rejected_vision.png"\>
@@ -122,7 +123,7 @@ site: http://www.hcii.cmu.edu/M-HCI/2013/novo/
         <p class="caption">We tested by having users run through a pretend procedure in our mockup space station.</p>
     </div>
 
-    <p>Gordon and I ended up building a prototyping tool that would let us use the actual HMD in tests but would display our wireframes instead of working software<sup><a id="ref3" href="#fn3" title="Jump to footnote.">3</a></sup>. This allowed us to test six iterations within a few weeks.</p>
+    <p><a href="http://www.gordonsliu.com" target="_blank">Gordon</a> and I ended up building a prototyping tool that would let us use the actual HMD in tests but would display our wireframes instead of working software<sup><a id="ref3" href="#fn3" title="Jump to footnote.">3</a></sup>. This allowed us to test six iterations within a few weeks.</p>
 
     <p>The final version was designed to have a pretty simple, linear structure (while allowing users to jump to anywhere if desired). It splits steps into individual screens and provides in-context information and AR overlays to address the verbosity of current procedures.</p>
 
@@ -139,7 +140,7 @@ site: http://www.hcii.cmu.edu/M-HCI/2013/novo/
 
 <section>
     <h2>Hardware limitations</h2>
-    <p>For hardware, we chose to use the Epson Moverio due to it being one of the few available HMDs and its Affordability compared to the rest of the market. The down side is that the Moverio doesn't have any external sensors, so again we had to find a way to get what we needed. We ended up pairing the Moverio with a tablet to process all voice commands and handle the AR. The tablet then relayed what to display to the HMD. While not pretty - or ideal - it got the job done.</p>
+    <p>For hardware, we chose to use the Epson Moverio due to it being one of the few available HMDs and its Affordability compared to the rest of the market. The down side is that the Moverio doesn't have any external sensors, so again we had to find a way to get what we needed. We ended up pairing the Moverio with a tablet to process all voice commands and handle the AR. The tablet then relayed what to display to the HMD. While not pretty &mdash; or ideal &mdash; it got the job done.</p>
 
     <div class="figure">
         <img src="/assets/images/peer/the_future.jpg"\>

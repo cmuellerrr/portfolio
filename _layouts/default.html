@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width">
         <title>MUELLER | {{ page.title }}</title>
 
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Permanent+Marker' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Open+Sans:400,600,700|Permanent+Marker' rel='stylesheet' type='text/css'>
 
         <link rel="stylesheet" href="/css/normalize.css">
         <link rel="stylesheet" href="/css/main.css">
@@ -31,18 +31,22 @@
     </head>
 
     <body>
-        <header class="content">
-            <div class="logo"><a href="/">CM</a></div>
-            <nav>
-                <a href="/">HOME</a>
-                <a href="/about.html">ABOUT</a>
-            </nav>
+        <header>
+            <div class="content">
+                <div class="logo"><a href="/">CM</a></div>
+                <nav>
+                    <a href="/about.html">ABOUT</a>
+                    <a href="mailto:chris@iammueller.com" target="_top">CONTACT</a>
+                </nav>
+            </div>
         </header>
 
         {{ content }}
 
-        <footer class="content">
-            <p>&copy; 2013 <a href="/">Chris Mueller</a></p>
+        <footer>
+            <div class="content">
+                <p>Made by <a href="http://www.iammueller.com">Chris</a> in 2014</p>
+            </div>
         </footer>
     </body>
 </html>

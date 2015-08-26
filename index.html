@@ -6,26 +6,19 @@ title: Home
 <div class="content home">
 
   <section class="lead">
-    <img class="round" src="assets/images/8bitchris.png" alt="Me">
-    <h1>Hi. I'm Chris.</h1>
+    <img class="round" src="assets/images/lowpolychris.png" alt="Me">
+    <h1>Hello, I'm Chris.</h1>
 
     <div class="intro">
-      <p>Interaction designer and software developer.</p>
-      <p>Currently @ <a href="http://www.nasa.gov/centers/ames/about/overview.html" target="_blank">NASA ARC</a> in Mountain View, CA.</p>
-      <p>Check my <a href="about.html">about</a> page or a few case studies below.</p>
+      <p>I'm an interaction designer and software developer. Currently, I'm designing things at <a href="http://www.nasa.gov/centers/ames/about/overview.html" target="_blank">NASA Ames Research Center</a> in Mountain View, CA. You can check out a few case studies below or head to my <a href="about.html">about page</a> for more on me.</p>
     </div>
 
     <div class="intro-abridged">
-      <p>Designer and developer.</p>
-      <p>Currently @ <a href="http://www.nasa.gov/centers/ames/about/overview.html" target="_blank">NASA ARC</a>.</p>
-      <p>Check a few case studies below.</p>
+      <p>Designer and developer. Currently @ <a href="http://www.nasa.gov/centers/ames/about/overview.html" target="_blank">NASA ARC</a>. Check out a few case studies below.</p>
     </div>
-
-    <p class="contact"><a href="mailto:chris@iammueller.com" target="_top">chris@iammueller.com</a></p>
   </section>
 
   <section class="work clear">
-    <h2>Case Studies</h2>
 
     {% for post in site.posts %}
 
@@ -33,6 +26,10 @@ title: Home
         <a href="{{ post.url }}">
           <h3 class="title">{{ post.title }}</h3>
           <p class="tagline">{{ post.tagline }}</p>
+          <ul class="meta">
+            {% if post.type != null %}<li>{{ post.type }}</li>{% endif %}
+            {% if post.completed != null %}<li>{{ post.completed }}</li>{% endif %}
+          </ul>
         </a>
       </div>
 

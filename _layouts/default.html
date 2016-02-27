@@ -1,52 +1,13 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width">
-        <title>MUELLER | {{ page.title }}</title>
 
-        <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Open+Sans:400,600,700|Permanent+Marker' rel='stylesheet' type='text/css'>
+    {% include head.html %}
 
-        <link rel="stylesheet" href="/css/normalize.css">
-        <link rel="stylesheet" href="/css/main.css">
-
-        <!--
-        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
-        <script type="text/javascript" src="/js/main.js"></script>
-        -->
-
-        <!-- Analytics -->
-        <script type="text/javascript">
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-38944056-1']);
-          _gaq.push(['_trackPageview']);
-
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-        </script>
-    </head>
-
-    <body>
-        <header>
-            <div class="content">
-                <div class="logo"><a href="/">CM</a></div>
-                <nav>
-                    <a href="/about.html">ABOUT</a>
-                    <a href="mailto:chris@iammueller.com" target="_top">CONTACT</a>
-                </nav>
-            </div>
-        </header>
+    <body class="{{ page.class }}">
+        {% include header.html %}
 
         {{ content }}
 
-        <footer>
-            <div class="content">
-                <p>Made by <a href="http://www.iammueller.com">Chris</a> in 2014</p>
-            </div>
-        </footer>
+        {% include footer.html %}
     </body>
 </html>

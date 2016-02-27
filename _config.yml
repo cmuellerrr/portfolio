@@ -1,4 +1,12 @@
-name: Your New Jekyll Site
-markdown: redcarpet
-pygments: false
+# Site settings
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://iammueller.com" # the base hostname & protocol for your site
 permalink: /:categories/:title
+
+title: MUELLER
+description: > # this means to ignore newlines
+  The personal website of Chris Mueller, an interaction designer and software developer.
+
+
+# Build settings
+markdown: kramdown

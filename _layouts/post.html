@@ -1,5 +1,6 @@
 ---
 layout: default
+class: project
 ---
 
 <div class="content project">
@@ -18,29 +19,6 @@ layout: default
         </p>
       {% endif %}
     </div>
-  <!--
-    <div>
-        {% if page.image != null %}
-          <img class="fill" src="{{ page.image }}">
-        {% endif %}
-        {% if page.vimeo != null %}
-          <iframe class="fill" src="{{ page.vimeo }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        {% endif %}
-        {% if page.youtube != null %}
-          <iframe class="fill" src="{{ page.youtube }}" frameborder="0" allowfullscreen></iframe>
-        {% endif %}
-
-        <p>{{ page.summary }}</p>
-
-        {% if page.source != null %}
-          <p><a href="{{ page.source }}" target="_blank">View source</a></p>
-        {% endif %}
-
-        {% if page.download != null %}
-          <p><a href="{{ site.url }}/{{ page.download }}" target="_blank">Download full</a></p>
-        {% endif %}
-    </div>
-  -->
   </section>
 
   {{ content }}

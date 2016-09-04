@@ -273,6 +273,15 @@ footer {
   font-size: 14px;
 }
 
+.note {
+  background: #fff0d7;
+  padding: 15px;
+}
+
+.note p {
+  margin: 0;
+}
+
 .figure,
 .quote {
   margin-top: 50px;

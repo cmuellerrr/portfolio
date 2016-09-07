@@ -13,17 +13,17 @@ tools: Sketch, HTML/CSS/JS
 ---
 
 <section class="note">
-    <p><b>NOTE: </b>Due to the nature of this work, I can't publish much detail of the process nor the final product. Therefore, I'll primarily be using wireframes to give a general idea of the concept.</p>
+    <p><b>NOTE: </b>Due to the nature of this work, I can't publish much detail of the process nor the final product. Therefore, I'll primarily be using diagrams to give a general idea of the concept.</p>
 </section>
 
 <section>
     <h2>TL;DR</h2>
-    <p>Every NASA flight goes through a series of reviews to certify that it is safe to launch. These reviews typically involve lots of documentation and presentations discussing what work has been done, what remains, and whether or not there are any issues. We've been developing on software to help streamline how data is gathered and presented for upcoming Exploration missions.</p>
+    <p>Every NASA flight goes through a series of reviews to certify that it is safe to launch. These reviews typically involve lots of documentation and presentations discussing whether or not there are potential issues. They typically make a bunch of slide decks and gather data manually from lots of different places. We are developing software to help streamline how data is gathered and presented at CoFR reviews for future Exploration missions.</p>
 </section>
 
 <section>
     <h2>Background</h2>
-    <p>In order to make sure that every mission is safe to launch, NASA has what's known as a Certification of Flight Readiness (CoFR) process. The CoFR process is a series of reviews where the organizations responsible for the many parts of a mission will present their status and certify whether or not they have met their requirements for that milestone. The board of that milestone review then makes judgment on whether the mission is fit to continue to the next milestone. This eventually leads up to the day of launch, where a final "go" or "no-go" decision is made<sup><a id="ref1" href="#fn1" title="Jump to footnote.">1</a></sup>. There are lots of caveats and special cases, but that's basically it.</p>
+    <p>In order to make sure that every mission is safe to launch, NASA has what's known as a Certification of Flight Readiness (CoFR) process. The CoFR process is a series of milestone reviews where the organizations responsible for the many parts of a mission present their status and certify whether or not they have met their requirements for that milestone. The board of that milestone review then determines if the mission is fit to continue to the next milestone. This eventually leads up to the day of launch, where a final "go" or "no-go" decision is made<sup><a id="ref1" href="#fn1" title="Jump to footnote.">1</a></sup>. There are lots of caveats and special cases, but that's basically it.</p>
 
     <div class="figure">
         <img src="/assets/images/ecofr/06pd1141.jpg"\>
@@ -35,7 +35,7 @@ tools: Sketch, HTML/CSS/JS
 
 <section>
     <h2>Analyzing the process</h2>
-    <p>We started by researching how these reviews were done in the past with the Space Shuttle Program (SSP) and were able to observe how they are currently done with the International Space Station (ISS). Through further analysis of Exploration CoFR plans and retrospective interviews with people who have participated in CoFR reviews, we were able to model the CoFR process for upcoming missions.</p>
+    <p>We started by researching how these reviews were done in the past with the Space Shuttle Program (SSP) and were able to observe how they are currently done with the International Space Station (ISS). Through further analysis of Exploration CoFR plans and retrospective interviews with people who have participated in CoFR reviews, we were able to model the CoFR process for future missions.</p>
 
     <p>Something that stuck out to us was just how much effort goes in to gathering the data that needs to be presented at these reviews. NASA has a countless number of systems that contain various sorts of data. The only way for an organization to get a full picture of their status is to look at data from all their associated systems, one by one<sup><a id="ref2" href="#fn2" title="Jump to footnote.">2</a></sup>.</p>
 
@@ -47,19 +47,21 @@ tools: Sketch, HTML/CSS/JS
 
 <section>
     <h2>A phased approach</h2>
-    <p>We decided to tackle this project as a series of incremental releases. The first release is focused on the general facilitation of the CoFR review. Make sure that the basics &mdash; such as signing endorsements and indicating an exception to a requirement &mdash; are simple and straightforward. The first release also helps to summarize and visualize status by providing real-time metrics of CoFR-related data.</p>
+    <p>We decided to tackle this project as a series of incremental releases. The first release is focused on the general facilitation of the CoFR review; make sure that the basics &mdash; like signing endorsements and indicating an exception to a requirement &mdash; are simple and straightforward. The first release also helps to summarize and visualize status by providing real-time metrics of CoFR-related data.</p>
+
+    <p>The second release will focus on reducing the amount of time organizations spend gathering and tracking data from various external systems. We're looking to provide a centralized portal where users can query external systems and track data that affects their flight readiness.</p>
 
     <div class="figure">
         <img src="/assets/images/ecofr/___.jpg"\>
         <p class="caption">For example, users can view a burn down of action items assigned at a previous review.</p>
     </div>
 
-    <p>Because this will be a system used by each major program within NASA, we usability tested the first release's capabilities with members of many different organizations so we could get a wide range of data points and opinions. We'll continue to utilize this varied set of users to inform the design of the system in subsequent releases.</p>
+    <p>Because this will be a system used by each major program within NASA, we usability tested the first release's capabilities with various organizations so we could get a wide range of data points and opinions. We'll continue to utilize this broad set of users to inform the design of the system in subsequent releases.</p>
 </section>
 
 <section>
     <h2>Forward work</h2>
-    <p>We deployed the first version of the software, which focused on facilitating a review and visualizing data, in Aug 2016. We are currently working on the a follow-up release planned for early 2017 that will put more emphasis on gathering and statusing data that feeds the CoFR presentations.</p>
+    <p>We deployed the first version of the software, which focused on facilitating a review and visualizing data, in Aug 2016. The a follow-up release is planned for early 2017 and will put more emphasis on gathering and statusing data that feeds CoFR presentations.</p>
 </section>
 
 <section class="footnotes">

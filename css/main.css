@@ -234,6 +234,8 @@ footer {
 .excerpt .meta {
   margin: 0;
   padding: 0;
+
+  font-size: 14px;
   color: #AAA;
 }
 
@@ -268,9 +270,20 @@ footer {
   font-size: 20px;
 }
 
-.meta {
+.project .meta {
   margin-top: 25px;
   font-size: 14px;
+}
+
+.project .meta p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.continue {
+  text-align: center;
+  font-size: 14px;
+  color: #AAA;
 }
 
 .note {

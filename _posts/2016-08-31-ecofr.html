@@ -10,6 +10,7 @@ completed: Aug 2016
 length: 24 months
 role: Project manager, design lead
 tools: Sketch, HTML/CSS/JS
+methods: literature review, observation, artifact analysis, retrospective interviews, personas, user stories
 ---
 
 <section class="note">
@@ -18,28 +19,59 @@ tools: Sketch, HTML/CSS/JS
 
 <section>
     <h2>Summary</h2>
-    <p>Every NASA flight goes through a series of reviews to certify that it is safe to launch. These reviews typically involve lots of documentation and presentations discussing whether or not there are potential issues. They typically make a bunch of slide decks and gather data manually from lots of different places. We are developing software to help streamline how data is gathered and presented at CoFR reviews for future Exploration missions.</p>
+    <p>Every NASA flight goes through a series of reviews to certify that it is safe to launch. These reviews typically involve lots of documentation and presentations discussing whether or not there are potential issues. This is typically a very long and laborious process, so we developed software to help streamline the way data is gathered and presented at certification reviews for future Exploration missions.</p>
+
+    <div class="figure">
+        <img src="/assets/images/ecofr/_____.jpg"\>
+    </div>
 
     <p class="continue">Keep reading for more details on our process</p>
 </section>
 
 <section>
-    <h2>Background</h2>
-    <p>In order to make sure that every mission is safe to launch, NASA has what's known as a Certification of Flight Readiness (CoFR) process. The CoFR process is a series of milestone reviews where the organizations responsible for the many parts of a mission present their status and certify whether or not they have met their requirements for that milestone. The board of that milestone review then determines if the mission is fit to continue to the next milestone. This eventually leads up to the day of launch, where a final "go" or "no-go" decision is made<sup><a id="ref1" href="#fn1" title="Jump to footnote.">1</a></sup>. There are lots of caveats and special cases, but that's basically it.</p>
+    <h2>The challenge</h2>
+    <p>In order to make sure that every mission is safe to launch, NASA has what's known as a Certification of Flight Readiness (CoFR) process. The CoFR process is a series of milestone reviews where the organizations responsible for the many parts of a mission present their status and certify whether or not they have met their requirements for that milestone. The board members of that review then determine if the mission is fit to continue to the next milestone. This eventually leads up to the day of launch, where a final "go" or "no-go" decision is made<sup><a id="ref1" href="#fn1" title="Jump to footnote.">1</a></sup>.</p>
 
     <div class="figure">
         <img src="/assets/images/ecofr/06pd1141.jpg"\>
         <p class="caption">This is an image from the Flight Readiness Review (FRR) for <a href="https://en.wikipedia.org/wiki/STS-121">STS-121</a>. Image courtesy of NASA.</p>
     </div>
 
-    <p>Normally, this is done with a bunch of slide decks thrown onto a wiki. While that certainly works for the actual review, there are parts of the process that could be made more efficient.</p>
+    <p>This involves manually gathering mounds of data from lots of different sources, analyzing said data, then documenting that analysis in a presentation.<p>
+
+    <p><b>We were asked to create an electronic system that assists the collection, relationship, and presentation of CoFR data to increase time available for analysis and closure activities.</b></p>
 </section>
 
 <section>
-    <h2>Analyzing the process</h2>
-    <p>We started by researching how these reviews were done in the past with the Space Shuttle Program (SSP) and were able to observe how they are currently done with the International Space Station (ISS). Through further analysis of Exploration CoFR plans and retrospective interviews with people who have participated in CoFR reviews, we were able to model the CoFR process for future missions.</p>
+    <h2>Our process</h2>
+    <p>We started our research with a literature review of Space Shuttle Program (SSP) CoFR reviews. We also observed a current CoFR review for the International Space Station (ISS). Through an artifact analysis of Exploration Systems Development (ESD) CoFR plans and retrospective interviews with people with past CoFR experience, we were able to make a model of the CoFR process for upcoming ESD missions.</p>
 
-    <p>Something that stuck out to us was just how much effort goes in to gathering the data that needs to be presented at these reviews. NASA has a countless number of systems that contain various sorts of data. The only way for an organization to get a full picture of their status is to look at data from all their associated systems, one by one<sup><a id="ref2" href="#fn2" title="Jump to footnote.">2</a></sup>.</p>
+    <p>With this model, we began our process of developing role-based personas. We use role-based personas to understand the types of users we'll have, and their differing needs. We then used these personas to create a set of user stories that laid out all of the goals we need to address is our design.</p>
+
+    <div class="quote">
+        <p>As a &lt;type of user&gt;, I want &lt;some goal&gt; so that &lt;some reason&gt;.</p>
+    </div>
+
+    <p>Since this project had a lot of visibility and reached broadly across NASA, we knew that people would need to see beyond wireframes and storyboards in order to buy in to the vision. So, we built a full proof of concept from scratch to display the overall design direction. This put us on a whirlwind tour of demos and discussions, but ended up being vital to conveying the concept to stakeholders.</p>
+
+    <div class="figure">
+        <img src="/assets/images/ecofr/_____.png"\>
+        <p class="caption">Our prototype let us quickly explore different ideas for modeling the complicated data structure.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Our solution</h2>
+    <p>There are two primary components of the CoFR process that we are designing for: data analysis and review facilitation.</p>
+
+    <p>Firstly, we focused on the general management of a CoFR review; make sure that the basics &mdash; like signing endorsements and indicating an exception to a requirement &mdash; are simple and straightforward. Inefficiencies in the primary review processes will negate any efficiencies we gain elsewhere. Our system is designed to provide a simple interface for creating and linking data items, digitally signing documents, and reporting on data.</p>
+
+    <div class="figure">
+        <img src="/assets/images/ecofr/metrics.png"\>
+        <p class="caption">The system also provides real-time metrics to more easily understand the massive data set.</p>
+    </div>
+
+    <p>Secondly, we wanted to look at reducing the amount of time organizations spend gathering and tracking data from various external systems. NASA has a countless number of systems that contain various sorts of data and the only way for an organization to get a full picture of their status is to look at all those systems, one by one<sup><a id="ref2" href="#fn2" title="Jump to footnote.">2</a></sup>. Our design is aiming to provide a centralized portal where users can query external systems and track data that affects their flight readiness — no more spreadsheets.</p>
 
     <div class="figure">
         <img src="/assets/images/ecofr/gathering.png"\>
@@ -47,24 +79,15 @@ tools: Sketch, HTML/CSS/JS
     </div>
 </section>
 
+<!--
 <section>
-    <h2>A phased approach</h2>
-    <p>We decided to tackle this project as a series of incremental releases. The first release is focused on the general facilitation of the CoFR review; make sure that the basics &mdash; like signing endorsements and indicating an exception to a requirement &mdash; are simple and straightforward. The first release also helps to summarize and visualize status by providing real-time metrics of CoFR-related data.</p>
-
-    <p>The second release will focus on reducing the amount of time organizations spend gathering and tracking data from various external systems. We're looking to provide a centralized portal where users can query external systems and track data that affects their flight readiness.</p>
-
-    <div class="figure">
-        <img src="/assets/images/ecofr/metrics.png"\>
-        <p class="caption">For example, users can view a burn down of action items assigned at a previous review.</p>
-    </div>
+    <h2>Results</h2>
 
     <p>Because this will be a system used by each major program within NASA, we usability tested the first release's capabilities with various organizations so we could get a wide range of data points and opinions. We'll continue to utilize this broad set of users to inform the design of the system in subsequent releases.</p>
-</section>
 
-<section>
-    <h2>Forward work</h2>
     <p>We deployed the first version of the software, which focused on facilitating a review and visualizing data, in Aug 2016. The a follow-up release is planned for early 2017 and will put more emphasis on gathering and statusing data that feeds CoFR presentations.</p>
 </section>
+-->
 
 <section class="footnotes">
     <p><sup id="fn1">1. There's a great writeup of the events of an actual FRR <a href="http://appel.nasa.gov/2010/01/01/getting-to-yes-the-flight-readiness-review/">here</a>.<a href="#ref1" title="Jump to reference in the text.">&#8617;</a></sup></p>

@@ -3,13 +3,14 @@ layout: post
 categories: work
 title: "Mobile Task Worksheets"
 type: "Production System"
-tagline: "Digitizing task worksheets used to configure the NASA Ames Arc Jet Complex."
+tagline: "Digitizing task sign-off in the NASA Ames Arc Jet Complex."
 team:
   - <a href="http://hci.arc.nasa.gov/">NASA Ames HCI Group</a>
 completed: Apr 2014
 length: 5 months
 role: Design lead
 tools: Sketch, HTML/CSS/JS
+methods: contextual inquiry, artifact analysis, competitive analysis, interactive prototyping
 ---
 
 <section class="note">
@@ -18,7 +19,7 @@ tools: Sketch, HTML/CSS/JS
 
 <section>
     <h2>Summary</h2>
-    <p>The <a href="https://www.nasa.gov/centers/ames/thermophysics-facilities/arcjet-complex">NASA Ames Arc Jet Complex</a> tests vehicle heat shielding by simulating flight- and re-entry conditions (i.e. lights stuff on fire). They configure the equipment &mdash; and verify that configuration &mdash; for each test based on steps described in a <em>task worksheet</em>. Their old, paper-based process needed some improvements. We created a web-based tool for authoring worksheets and executing them on mobile devices.</p>
+    <p>The <a href="https://www.nasa.gov/centers/ames/thermophysics-facilities/arcjet-complex">NASA Ames Arc Jet Complex</a> tests vehicle heat shielding by simulating flight- and re-entry conditions (i.e. lights stuff on fire). They configure the equipment &mdash; and verify that configuration &mdash; for each test based on steps described in a <em>task worksheet</em>. Their old, paper-based process needed some improvements, so we created an adaptive web application for authoring worksheets on desktop computers, and executing them on mobile devices.</p>
 
     <div class="figure">
         <img src="/assets/images/etws/overview.png"\>
@@ -28,43 +29,61 @@ tools: Sketch, HTML/CSS/JS
 </section>
 
 <section>
-    <h2>Background</h2>
-    <p>The Arc Jet is a super complicated piece of equipment that can simulate flight- and re-entry conditions in a variety of different atmospheres. In order to configure this equipment properly for each test, engineers create a <em>task worksheet</em> describing the equipment and configuration. The steps on this worksheet are executed by the facility technicians and verified by quality assurance.</p>
+    <h2>The challenge</h2>
+    <p>The Arc Jet is an extremely complicated piece of equipment that can simulate flight- and re-entry conditions in a variety of different atmospheres. In order to configure this equipment properly for each test, engineers create <em>task worksheets</em> describing the equipment and configuration. The steps on this worksheet are executed by the facility technicians and may have follow-up quality assurance actions; some steps require additional data entry, and every step must be signed by the individuals responsible for it.</p>
 
     <div class="figure">
         <img src="/assets/images/etws/arc_arcjet_pic_0.jpg"\>
         <p class="caption">A model being tested in the AHF. Image courtesy of NASA.</p>
     </div>
 
-    <p>The previous version of the worksheets were paper-based, which had the trade-offs you'd expect &mdash; it's portable and you can write on it, but it gets cluttered with revision markings, requires physical storage, it's not searchable, etc. So we were asked to look in to a way to get the best of both worlds while adding additional efficiencies resulting from our research.</p>
+    <p>These worksheets were paper-based, which had the trade-offs you'd expect &mdash; it's portable and you can write on it, but it gets cluttered with revision markings, requires physical storage, it's not search-able, etc.</p>
+
+    <p><b>We were asked to look in to a way to make this paper-based approach more efficient by reducing errors and increasing worksheet completion.</b></p>
 </section>
 
 <section>
-    <h2>Understanding the problem</h2>
-    <p>We started off by conducting interviews with several people who work with the <em>task worksheets</em> to model the flow from authoring to execution to actual testing. As part of this, we analyzed hundreds of existing worksheets to to determine what we called the worksheet's 'anatomy'. Basically it lays out the information being put in these worksheets (both planned and unplanned) and showed us the structure that we needed to design.</p>
+    <h2>Our process</h2>
+    <p>Like most projects, we started with contextual inquiries of those who interact with the <em>task worksheets</em> to produce flow and sequence models and identify breakdowns. We performed an artifact analysis of hundreds of existing worksheets to lay out the information being captured (both planned and unplanned). We also did quick competitive analysis of applications that structure discrete tasks and met with another organization at Ames that encountered a similar type of problem.</p>
 
     <div class="figure">
         <img src="/assets/images/etws/anatomy.png"\>
-        <p class="caption">The 'anatomy' looked something like this. More or less a <a href="https://en.wikipedia.org/wiki/Context-free_grammar">CFG</a>.</p>
+        <p class="caption">We modeled the worksheet structure using — more or less — a <a href="https://en.wikipedia.org/wiki/Context-free_grammar">CFG</a>.</p>
     </div>
 
-    <p>We also met with another group at Ames that used a <a href="https://en.wikipedia.org/wiki/Commercial_off-the-shelf">COTS</a> mobile application for a similar type of problem. After exploring that option, we determined that it wasn't the right fit.</p>
+    <p>After a few rounds of sketching and discussion, we started to hone in on an idea that could give users the authoring flexibility of a word processor, yet the structure needed for things like searching, linking, and sign-off. In order to refine this idea, I created a quick JavaScript prototype which ended up being instrumental in getting buy-in and conveying the concept to the rest of the team.</p>
+
+    <div class="figure">
+        <img src="/assets/images/etws/___.png"\>
+        <p class="caption">The prototype showed how users can author a structured worksheet without taking their hands off the keyboard.</p>
+    </div>
+
+    <p>During the design process, we had continual check-ins our stakeholders to make sure they were satisfied with the direction. Additionally, we set up usability tests with 6 eventual users to validate and tweak the design.</p>
 </section>
 
 <section>
-    <h2>The final product</h2>
-    <p>There are really two phases of the task worksheet life-cycle: authoring and execution. During our research, we saw that the worksheet authors did their test planning at their desktop computers, while executors were constantly on the move. So the system has authors use a web application to create worksheets using the building blocks we identified previously. When finished, that worksheet becomes available on a mobile device so executors can perform their work while moving around the complex. As they work, they can enter values and sign off on steps they've completed.</p>
+    <h2>Our solution</h2>
+    <p>Our research identified that there are effectively two phases of the worksheet life-cycle: authoring and execution. We saw that the worksheet authors did all of their work at their desktop computers, while executors were constantly on the move. The system is designed to take advantage of the user's situation in each of these phases.</p>
+
+    <p>In the authoring phase, the system is designed for the engineers who will be creating documents on a standard, desktop web browser. The artifact analysis identified that a worksheet is made up of a standard set of components that can be tailored according to the specific test's needs. Our solution treats these components as building blocks that authors add and configure in whatever order needed.</p>
 
     <div class="figure">
         <img src="/assets/images/etws/authoring.png"\>
         <p class="caption">Engineers author a worksheet by adding and configuring standard elements.</p>
     </div>
 
-    <p>During the design process, we had continual check-ins our stakeholders to make sure they were satisfied with the direction. Additionally, we set up usability tests with 6 people to verify it was easy to use.</p>
+    <p>In the execution phase, the system is designed for the technicians and QA representatives who will be on the move. Once an engineer is finished authoring the document, the worksheet becomes available on a mobile device so executors can perform their work while moving around the complex. As they work, they can enter values and sign off on steps they've completed.</p>
+
+    <div class="figure">
+        <img src="/assets/images/etws/____.png"\>
+        <p class="caption">Limiting the worksheets shown on the mobile device ensures that executors focus on the ones that are good to go.</p>
+    </div>
 </section>
 
+<!--
 <section>
-    <h2>Subsequent versions</h2>
+    <h2>Results</h2>
+
     <p>Since the initial release in April 2014, we've had two major updates. Each release focused on adding a new capability to the system while making incremental improvements to existing features. They both used the standard methods of contextual inquiry, retrospective interviews, and usability testing.</p>
 </section>
-
+-->

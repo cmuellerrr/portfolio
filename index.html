@@ -28,7 +28,7 @@ title: Home
           <h3 class="title">{{ post.title }}</h3>
           <p class="tagline">{{ post.tagline }}</p>
           <ul class="meta">
-            {% if post.type != null %}<li>{{ post.type }}</li>{% endif %}
+            {% if post.classification != null %}<li>{{ post.classification }}</li>{% endif %}
             {% if post.completed != null %}<li>{{ post.completed }}</li>{% endif %}
             {% if post.updated != null %}<li>Updated {{ post.updated }}</li>{% endif %}
           </ul>

@@ -6,37 +6,54 @@ title: Home
 
 <div class="content home">
 
-  <section class="lead">
-    <img class="round" src="assets/images/lowpolychris.png" alt="Me">
-    <h1>Hello, I'm Chris.</h1>
+    <section class="lead">
+        <img class="round" src="/assets/images/lowpolychris.png" alt="Me">
+        <h1>Hello, I'm Chris.</h1>
 
-    <div class="intro">
-      <p>I'm an interaction designer and software developer. Currently, I'm designing things at <a href="http://www.nasa.gov/centers/ames/about/overview.html">NASA Ames Research Center</a> in Mountain View, CA. You can check out a few case studies below or head to my <a href="about.html">about page</a> for more on me.</p>
-    </div>
+        <div class="intro">
+            <p>I'm an interaction designer and software developer. Currently, I'm designing things at <a href="http://www.nasa.gov/centers/ames/about/overview.html">NASA Ames Research Center</a> in Mountain View, CA. You can check out a few case studies below or head to my <a href="/about">about page</a> for more on me.</p>
+        </div>
 
-    <div class="intro-abridged">
-      <p>Designer and developer. Currently @ <a href="http://www.nasa.gov/centers/ames/about/overview.html">NASA ARC</a>. Check out a few case studies below.</p>
-    </div>
-  </section>
+        <div class="intro-abridged">
+            <p>Designer and developer. Currently @ <a href="http://www.nasa.gov/centers/ames/about/overview.html">NASA ARC</a>. Check out a few case studies below.</p>
+        </div>
+    </section>
 
-  <section class="work clear">
+    <section class="work-list clear">
 
-    {% for post in site.posts %}
+        <p><b>Case Studies</b></p>
 
-      <div class="excerpt">
-        <a href="{{ post.url }}">
-          <h3 class="title">{{ post.title }}</h3>
-          <p class="tagline">{{ post.tagline }}</p>
-          <ul class="meta">
-            {% if post.classification != null %}<li>{{ post.classification }}</li>{% endif %}
-            {% if post.completed != null %}<li>{{ post.completed }}</li>{% endif %}
-            {% if post.updated != null %}<li>Updated {{ post.updated }}</li>{% endif %}
-          </ul>
-        </a>
-      </div>
+        {% for post in site.posts %}
+            {% if post.featured == true %}
+            <div class="excerpt">
+                <a href="{{ post.url }}">
+                    <h3 class="title">{{ post.title }}</h3>
+                    <p class="tagline">{{ post.tagline }}</p>
+                    <ul class="meta">
+                        {% if post.classification != null %}<li>{{ post.classification }}</li>{% endif %}
+                        {% if post.completed != null %}<li>{{ post.completed }}</li>{% endif %}
+                    </ul>
+                </a>
+            </div>
+            {% endif %}
+        {% endfor %}
 
-    {% endfor %}
+        <a href="/work">See all projects</a>
 
-  </section>
+    </section>
+
+    <section class="work-list clear">
+
+        <p><b>Other Work</b></p>
+
+        {% for short in site.shorts reversed%}
+            {% if short.featured == true %}
+            {{ short.content }}
+            {% endif %}
+        {% endfor %}
+
+        <a href="/work">See all projects</a>
+
+    </section>
 
 </div>

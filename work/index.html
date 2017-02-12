@@ -1,0 +1,42 @@
+---
+layout: default
+class: work
+title: Work
+---
+
+<div class="content work">
+
+    <section class="lead">
+        <h1>All the projects I've written about</h1>
+    </section>
+
+  <section class="work-list clear">
+
+        <p><b>Case Studies</b></p>
+
+        {% for post in site.posts %}
+            <div class="excerpt">
+                <a href="{{ post.url }}">
+                    <h3 class="title">{{ post.title }}</h3>
+                    <p class="tagline">{{ post.tagline }}</p>
+                    <ul class="meta">
+                        {% if post.classification != null %}<li>{{ post.classification }}</li>{% endif %}
+                        {% if post.completed != null %}<li>{{ post.completed }}</li>{% endif %}
+                    </ul>
+                </a>
+            </div>
+        {% endfor %}
+
+    </section>
+
+    <section class="work-list clear">
+
+        <p><b>Other Work</b></p>
+
+        {% for short in site.shorts reversed%}
+            {{ short.content }}
+        {% endfor %}
+
+    </section>
+
+</div>

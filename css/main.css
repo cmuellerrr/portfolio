@@ -193,13 +193,21 @@ footer {
 
 /* Excerpts */
 
-.work {
+.work-list {
   margin-top: 150px;
   text-align: center;
 }
 
 .excerpt {
   margin: 20px auto;
+}
+
+.short {
+  margin: 100px auto;
+}
+
+.short:first-of-type {
+  margin-top: 40px;
 }
 
 .excerpt a {
@@ -221,7 +229,8 @@ footer {
   background: #fff0d7;
 }
 
-.excerpt .title {
+.excerpt .title,
+.short .title {
   margin-top: 0;
   margin-bottom: 5px;
   color: #ff6153;
@@ -231,7 +240,12 @@ footer {
   margin: 0;
 }
 
-.excerpt .meta {
+.short p {
+  text-align: left;
+}
+
+.excerpt .meta,
+.short .meta {
   margin: 0;
   padding: 0;
 
@@ -239,10 +253,15 @@ footer {
   color: #AAA;
 }
 
-.excerpt .meta li {
+.excerpt .meta li,
+.short .meta li {
   display: inline;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.short .team {
+  font-size: 14px;
 }
 
 
@@ -253,7 +272,17 @@ footer {
   text-align: center;
 }
 
-.about.content p {
+.about.content .lead p {
+  text-align: left;
+}
+
+/* Work */
+
+.work .lead {
+  text-align: center;
+}
+
+.work.content .lead p {
   text-align: left;
 }
 

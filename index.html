@@ -21,7 +21,6 @@ title: Home
 
     <section class="work-list clear">
 
-        <p><b>Case Studies</b></p>
 
         {% for post in site.posts %}
             {% if post.featured == true %}
@@ -44,7 +43,7 @@ title: Home
 
     <section class="work-list clear">
 
-        <p><b>Other Work</b></p>
+        <h2>Other Featured Work</h2>
 
         {% for short in site.shorts reversed%}
             {% if short.featured == true %}

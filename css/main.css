@@ -210,6 +210,10 @@ footer {
   margin-top: 40px;
 }
 
+.short:last-of-type {
+  margin-bottom: 40px;
+}
+
 .excerpt a {
   display: block;
   height: 100%;

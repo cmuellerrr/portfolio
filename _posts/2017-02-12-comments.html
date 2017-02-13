@@ -1,0 +1,94 @@
+---
+layout: post
+categories: work
+featured: true
+title: "In-line Form Comments"
+tagline: "A method for commenting on form field content."
+classification: "Production Component"
+team:
+  - <a href="http://hci.arc.nasa.gov/">NASA Ames HCI Group</a>
+role: Design lead
+completed: Feb 2017
+length: 4 weeks
+tools: Sketch, InVision, Flinto
+methods: competitive analysis, document analysis, interactive prototyping
+---
+
+<section>
+    <h2>Summary</h2>
+    <p>NASA organizations often store their authoritative data in Word documents and rely on the built-in commenting features to facilitate their baseline reviews. As more and more orgs move to centralized, structured data systems, they need new tools to support those standard review processes. We designed a feature for users to have review discussions directly on the data they are reviewing.</p>
+
+    <!--
+    <div class="figure">
+        <img src="/assets/images/ecofr/overview.jpg"\>
+    </div>
+    -->
+
+    <p class="continue">Keep reading for more details on our process</p>
+</section>
+
+<section>
+    <h2>The challenge</h2>
+    <p>Reviewing and discussing data is a common use case for NASA organizations. Typically, these organizations use emails and MS Word's built-in commenting system for their reviews, but that approach has several issues:</p>
+
+    <ul>
+        <li>Reviewers work in a silo and frequently submit duplicate comments.</li>
+        <li>The document author has to merge each reviewer's comment.</li>
+        <li>Document authors need to track a document version for each review round.</li>
+    </ul>
+
+    <p>A centralized data system, in itself, helps to resolve most the above issues, but our framework currently only allows users to comment on a record as a whole, which separates the discussion from its context.</p>
+
+    <div class="figure">
+        <img src="/assets/images/comments/record-level.png"\>
+        <p class="caption">Reviews could take place in record-level comments, but they would quickly become unmanageable.</p>
+    </div>
+
+    <p><b>We sought to improve our commenting component by allowing users to comment directly on the data they are discussing.</b></p>
+</section>
+
+<section>
+    <h2>Our solution</h2>
+
+    <p>After several iterations and a competitive analysis of applications that provide commenting, we focused on a design that would be familiar to those accustomed to Word's commenting features &mdash; discussions take place in the right-hand pane, and are toggled on and off with a button press.</p>
+
+    <div class="figure">
+        <img src="/assets/images/comments/field-level.png"\>
+        <p class="caption">Too reduce cognitive load, user may only view comments for one field at a time.</p>
+    </div>
+
+    <p>Our new design supports standard features like editing, deleting, and resolving. Additionally, our document analysis showed that most comment threads rarely go multiple levels deep, so we limited replies to a single level.</p>
+
+    <div class="figure">
+        <img src="/assets/images/comments/threading.png"\>
+        <p class="caption">Keeping comment threads to one level helps to keep the conversation on-topic.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Results</h2>
+    <p>We usability tested the new design with 10 participants, moving through a real-life scenario that required the use of each feature.</p>
+
+    <p>The tests resulted in the following:</p>
+
+    <ul>
+        <li>Users easily formed a correct mental model of comment existence once identified.</li>
+        <li>Commenting functions were quickly identifiable and behaved as users expected.</li>
+        <li>Resolving comments required more steps than users expected.</li>
+        <li>Users showed preference for hiding resolved comments, but wanted them viewable if needed.</li>
+        <li>Color-coding comments according to user could add clarity to conversations, but more investigation needed.</li>
+        <li>The expected meaning of the icon badge varied across users.</li>
+    </ul>
+
+    <p>The core commenting functions tested very well amongst our participants, with the majority of actionable feedback came from the handling of resolved comments. Contrary to our hypothesis, users were surprisingly cavalier in their desire to remove comments once resoled.</p>
+
+    <div class="quote">
+        <p>these are awesome</p>
+        <p class="attribution">- Usability participant</p>
+    </div>
+</section>
+
+<section class="footnotes">
+    <p><sup id="fn1">1. And we know from many other projects that NASA users love this metaphor.<a href="#ref1" title="Jump to reference in the text.">&#8617;</a></sup></p>
+    <p><sup id="fn2">2. It's also a more satisfying interaction.<a href="#ref2" title="Jump to reference in the text.">&#8617;</a></sup></p>
+</section>

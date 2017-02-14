@@ -16,7 +16,7 @@ methods: competitive analysis, document analysis, interactive prototyping
 
 <section>
     <h2>Summary</h2>
-    <p>NASA organizations often store their authoritative data in Word documents and rely on the built-in commenting features to facilitate their baseline reviews. As more and more orgs move to centralized, structured data systems, they need new tools to support those standard review processes. We designed a feature for users to have review discussions directly on the data they are reviewing.</p>
+    <p>NASA organizations often store their authoritative data in Word documents and rely on built-in commenting features to facilitate their baseline reviews. As more and more orgs move to centralized, structured data systems, they need new tools to support those review processes. We designed a feature for users to have review discussions directly on the data they are reviewing.</p>
 
     <!--
     <div class="figure">
@@ -29,20 +29,20 @@ methods: competitive analysis, document analysis, interactive prototyping
 
 <section>
     <h2>The challenge</h2>
-    <p>Reviewing and discussing data is a common use case for NASA organizations. Typically, these organizations use emails and MS Word's built-in commenting system for their reviews, but that approach has several issues:</p>
+    <p>Reviewing and discussing data is a common use case for NASA organizations. Typically, these organizations use emails, spreadsheets, or Word's commenting feature for their reviews. That approach has several issues:</p>
 
     <ul>
         <li>Reviewers work in a silo and frequently submit duplicate comments.</li>
-        <li>The document author has to merge each reviewer's comment.</li>
+        <li>The document author has to merge each reviewer's comments.</li>
         <li>Document authors need to track a document version for each review round.</li>
     </ul>
 
-    <p>A centralized data system, in itself, helps to resolve most the above issues, but our framework currently only allows users to comment on a record as a whole, which separates the discussion from its context.</p>
-
     <div class="figure">
-        <img src="/assets/images/comments/record-level.png"\>
-        <p class="caption">Reviews could take place in record-level comments, but they would quickly become unmanageable.</p>
+        <img src="/assets/images/comments/comment-sheet.png"\>
+        <p class="caption">Many organizations compile and disposition all comments in a separate spreadsheet. Image redacted.</p>
     </div>
+
+    <p>A centralized data system, in itself, helps to resolve most the above issues, but our framework currently only allows users to comment on a record as a whole, which separates the discussion from its context.</p>
 
     <p><b>We sought to improve our commenting component by allowing users to comment directly on the data they are discussing.</b></p>
 </section>
@@ -53,15 +53,15 @@ methods: competitive analysis, document analysis, interactive prototyping
     <p>After several iterations and a competitive analysis of applications that provide commenting, we focused on a design that would be familiar to those accustomed to Word's commenting features<sup><a id="ref1" href="#fn1" title="Jump to footnote.">1</a></sup>. Discussions take place in the right-hand pane, and are toggled on and off with a button press.</p>
 
     <div class="figure">
-        <img src="/assets/images/comments/field-level.png"\>
-        <p class="caption">Too reduce cognitive load, user may only view comments for one field at a time.</p>
+        <img class="border" src="/assets/images/comments/field-level.png"\>
+        <p class="caption">Review discussions take place directly in context.</p>
     </div>
 
     <p>Our new design supports standard features like editing, deleting, and resolving. Additionally, our document analysis showed that most comment threads rarely go multiple levels deep, so we limited replies to a single level.</p>
 
     <div class="figure">
         <img src="/assets/images/comments/threading.png"\>
-        <p class="caption">Keeping comment threads to one level helps to keep the conversation on-topic.</p>
+        <p class="caption">Users can reply to high-level comments to start a thread.</p>
     </div>
 </section>
 

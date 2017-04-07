@@ -185,6 +185,14 @@ footer {
   display: none;
 }
 
+.intro-links a {
+  margin-right: 10px;
+}
+
+.intro-links a:last-child {
+  margin-right: 0;
+}
+
 .contact {
   margin-top: 20px;
   font-size: 14px;

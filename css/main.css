@@ -343,6 +343,11 @@ footer {
   margin-bottom: 50px;
 }
 
+.figure.mobile {
+  width: 50%;
+  margin: auto;
+}
+
 .figure img {
   width: 100%;
 }

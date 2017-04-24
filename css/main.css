@@ -448,4 +448,8 @@ and (max-width : 420px) {
   .intro-abridged {
     display: block;
   }
+
+  .figure.mobile {
+    width: 100%;
+  }
 }

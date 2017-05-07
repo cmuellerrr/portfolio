@@ -119,6 +119,7 @@ section {
 }
 */
 
+
 /* Header */
 
 header {
@@ -166,6 +167,7 @@ header nav a {
   text-decoration: none;
 }
 
+
 /* Footer */
 
 footer {
@@ -174,6 +176,7 @@ footer {
   text-align: center;
   color: #AAA;
 }
+
 
 /* Intro */
 
@@ -263,6 +266,7 @@ footer {
   text-align: left;
 }
 
+
 /* Work */
 
 .work .lead {
@@ -272,6 +276,7 @@ footer {
 .work.content .lead p {
   text-align: left;
 }
+
 
 /* Project */
 
@@ -352,6 +357,7 @@ sup a {
 .footnotes {
   border-top: 1px solid #c0c0c0;
 }
+
 
 /* Utility */
 

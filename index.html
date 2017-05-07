@@ -50,18 +50,4 @@ title: Home
 
     </section>
 
-    <section class="work-list clear">
-
-        <h2>Other Featured Work</h2>
-
-        {% for short in site.shorts reversed%}
-            {% if short.featured == true %}
-            {{ short.content }}
-            {% endif %}
-        {% endfor %}
-
-        <a href="/work">See all projects</a>
-
-    </section>
-
 </div>

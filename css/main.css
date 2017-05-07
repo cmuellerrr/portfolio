@@ -203,23 +203,11 @@ footer {
 
 .work-list {
   margin-top: 150px;
-  text-align: center;
 }
 
 .excerpt {
   margin: 20px auto;
-}
-
-.short {
-  margin: 100px auto;
-}
-
-.short:first-of-type {
-  margin-top: 40px;
-}
-
-.short:last-of-type {
-  margin-bottom: 40px;
+  position: relative;
 }
 
 .excerpt a {
@@ -228,7 +216,6 @@ footer {
   width: 100%;
   padding: 20px 10px;
 
-  border: 1px solid white;
   text-decoration: none;
 
   -webkit-transition: background .25s;
@@ -238,44 +225,26 @@ footer {
 }
 
 .excerpt a:hover {
-  background: #fff0d7;
+  background: #f1f1f1;
 }
 
-.excerpt .title,
-.short .title {
+.excerpt-text {
+  margin-left: 70px;
+}
+
+.excerpt-icon {
+  position: absolute;
+}
+
+.excerpt .title {
   margin-top: 0;
   margin-bottom: 5px;
-  color: #ff6153;
 }
 
-.excerpt p {
+.excerpt .tagline {
   margin: 0;
+  color: #aaa;
 }
-
-.short p {
-  text-align: left;
-}
-
-.excerpt .meta,
-.short .meta {
-  margin: 0;
-  padding: 0;
-
-  font-size: 14px;
-  color: #AAA;
-}
-
-.excerpt .meta li,
-.short .meta li {
-  display: inline;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.short .team {
-  font-size: 14px;
-}
-
 
 
 /* About */
@@ -416,7 +385,7 @@ img.border {
 and (max-width : 1024px) {
 
   .excerpt a {
-    border-color: #ff6153;
+    background: #f1f1f1;
   }
 
 }

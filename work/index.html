@@ -8,17 +8,16 @@ title: Work
 
   <section class="work-list clear">
 
-        <h2>Case Studies</h2>
-
         {% for post in site.posts %}
             <div class="excerpt">
                 <a href="{{ post.url }}">
-                    <h3 class="title">{{ post.title }}</h3>
-                    <p class="tagline">{{ post.tagline }}</p>
-                    <ul class="meta">
-                        {% if post.classification != null %}<li>{{ post.classification }}</li>{% endif %}
-                        {% if post.completed != null %}<li>{{ post.completed }}</li>{% endif %}
-                    </ul>
+                    <div class="excerpt-icon">
+                        <img src="/assets/images/{{ post.icon }}"\>
+                    </div>
+                    <div class="excerpt-text">
+                        <h3 class="title">{{ post.title }}</h3>
+                        <p class="tagline">{{ post.tagline }}</p>
+                    </div>
                 </a>
             </div>
         {% endfor %}

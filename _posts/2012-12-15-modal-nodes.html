@@ -1,10 +1,12 @@
 ---
 layout: post
 categories: work
-featured:
+featured: true
 title: "Modal Nodes"
 tagline: "Using human motion to control a large-scale music sequencer."
+tagline-short: "Motion-controlled sounscapes."
 classification: "Installation"
+icon: modal/icon-modal.png
 team:
   - <a href="http://www.cka.co">Charles Aweida</a>
 completed: Dec 2012
@@ -31,7 +33,7 @@ repo: https://www.github.com/cmuellerrr/modal-nodes
 	<p>Charles and I had an idea for a project that would scratch our itch for making an interactive art installation as well as have some academic value. The concept was for people to control a giant music sequencer through motion as ready by a Kinect. Users create musical "nodes" to place around the virtual environment; their 3D coordinates would determine tone and timing. Additionally, we would use this as an opportunity to research different methods of large-scale motion control. We would call the project Modal Nodes<sup><a id="ref1" href="#fn1" title="Jump to footnote.">1</a>.</p>
 
 	<div class="figure">
-		<img src="/assets/images/modal_nodes/diagram.png"\>
+		<img src="/assets/images/modal/diagram.png"\>
 		<p class="caption">We used concept diagrams like this to get an idea of how to scale the project.</p>
 	</div>
 </section>
@@ -41,7 +43,7 @@ repo: https://www.github.com/cmuellerrr/modal-nodes
 	<p>One aspect of testing was to see the differences between gesture-based (movement over time) and pose-based (static) interactions. We set up user testing sessions which varied poses and gestures for different interactions. Through observation and retrospective interviews, we found a few key differences.</p>
 
 	<div class="figure">
-		<img src="/assets/images/modal_nodes/pose_gesture.png"\>
+		<img src="/assets/images/modal/pose_gesture.png"\>
 		<p class="caption">Poses and gestures each had strengths that catered to different types of interactions.</p>
 	</div>
 
@@ -70,9 +72,9 @@ repo: https://www.github.com/cmuellerrr/modal-nodes
 	<p>For example, when users begin the process of creating a node, the normally ambient particles move away from the background and swarm around a user’s hands – the closer a user is to completing the action, the tighter and faster the particles swarmed (as shown in an exaggerated form below). When the action is complete, the particles turn into a node.</p>
 
 	<div class="figure">
-		<img src="/assets/images/modal_nodes/swarm_1.png"\>
-		<img src="/assets/images/modal_nodes/swarm_2.png"\>
-		<img src="/assets/images/modal_nodes/swarm_3.png"\>
+		<img src="/assets/images/modal/swarm_1.png"\>
+		<img src="/assets/images/modal/swarm_2.png"\>
+		<img src="/assets/images/modal/swarm_3.png"\>
 		<p class="caption">Swarming particles is one way we provide gesture affordance.</p>
 	</div>
 </section>
@@ -82,14 +84,14 @@ repo: https://www.github.com/cmuellerrr/modal-nodes
 	<p>Interactive audio projects like this are very easy to screw up because the users are in control, and most people aren't very good musicians. If you get a bunch of people in front of a screen where their movement creates sound, they are going to explore and make a bunch of noise. Then multiply that by n people and you probably get chaos. We needed to restrain that chaos so it didn't sound so...chaotic.</p>
 
 	<div class="figure">
-		<img src="/assets/images/modal_nodes/ex3.png"\>
+		<img src="/assets/images/modal/ex3.png"\>
 		<p class="caption">Groups interacting and the same time leads to some interesting (and great) sounds.</p>
 	</div>
 
 	<p>I like to think of it like this: imagine the resulting noise like a waveform - plotting the tone on the y-axis over time. If you are moving between sharp, distinct tones, you'll have sharp edges in that waveform. While the tones will be more distinct, it has a greater chance to sound chaotic because the y value is fluctuating wildly. If you smooth those edges and stretch it out, then the resulting noise will blend together and be less abrasive<sup><a id="ref2" href="#fn2" title="Jump to footnote.">2</a></sup>.</p>
 
 	<div class="figure">
-		<img src="/assets/images/modal_nodes/waveform.png"\>
+		<img src="/assets/images/modal/waveform.png"\>
 		<p class="caption">Pseudoscience at its finest. What I'm trying to say is that we want it to sound good.</p>
 	</div>
 

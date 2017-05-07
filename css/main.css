@@ -88,7 +88,7 @@ a {
 /* General */
 
 .content {
-  width: 640px;
+  width: 700px;
   padding: 0 20px;
   margin-left: auto;
   margin-right: auto;
@@ -206,8 +206,14 @@ footer {
 }
 
 .excerpt {
+  float: left;
+  width: 48%;
   margin: 20px auto;
   position: relative;
+}
+
+.excerpt:nth-child(odd) {
+  margin-right: 4%;
 }
 
 .excerpt a {
@@ -380,9 +386,21 @@ img.border {
 
 
 
-/* Tablet-ish size */
+/* SD size */
 @media only screen
 and (max-width : 1024px) {
+
+}
+
+/* Tablet-ish size */
+@media only screen
+and (max-width : 750px) {
+
+  .excerpt {
+    width: 100%;
+    margin-right: 0;
+    float: none;
+  }
 
   .excerpt a {
     background: #f1f1f1;
@@ -390,15 +408,9 @@ and (max-width : 1024px) {
 
 }
 
-/* Phone-ish size */
-@media only screen
-and (max-width : 720px) {
-
-}
-
 /* Breaking content width */
 @media only screen
-and (max-width : 640px) {
+and (max-width : 700px) {
 
   .content {
     width: auto;
@@ -406,9 +418,9 @@ and (max-width : 640px) {
 
 }
 
-/* Super small */
+/* Mobile-ish size */
 @media only screen
-and (max-width : 420px) {
+and (max-width : 400px) {
 
   .intro {
     display: none;

@@ -11,8 +11,11 @@ title: Work
         {% for post in site.posts %}
             <div class="excerpt">
                 <a href="{{ post.url }}">
-                    <div class="excerpt-icon">
-                        <img src="/assets/images/{{ post.icon }}"\>
+                    <div class="excerpt-icon icon-gray">
+                        <img src="/assets/images/{{ post.directory }}/icon-{{ post.directory }}.png"\>
+                    </div>
+                    <div class="excerpt-icon icon-color">
+                        <img src="/assets/images/{{ post.directory }}/icon-{{ post.directory }}-color.png"\>
                     </div>
                     <div class="excerpt-text">
                         <h3 class="title">{{ post.title }}</h3>

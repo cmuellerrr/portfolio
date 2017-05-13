@@ -47,33 +47,58 @@ methods: contextual inquiry, artifact analysis, competitive analysis, interactiv
 
 <section>
     <h2>Our process</h2>
-    <p>Like most projects, we started with contextual inquiries of those who interact with the <em>task worksheets</em> to produce flow and sequence models and identify breakdowns. We performed an artifact analysis of hundreds of existing worksheets to lay out the information being captured (both planned and unplanned). We also did quick competitive analysis of applications that structure discrete tasks and met with another organization at Ames that encountered a similar type of problem.</p>
+    <p>Like most projects, we started with a contextual inquiry to produce flow and sequence models and identify breakdowns. We performed an artifact analysis of hundreds of existing worksheets to lay out the information being captured (both planned and unplanned). We also did quick competitive analysis of applications that structure discrete tasks and met with another organization at Ames that encountered a similar type of problem.</p>
 
     <div class="figure">
         <img src="/assets/images/etws/anatomy.png"\>
         <p class="caption">We modeled the worksheet structure using &mdash; more or less &mdash; a <a href="https://en.wikipedia.org/wiki/Context-free_grammar">CFG</a>.</p>
     </div>
 
-    <p>After a few rounds of sketching and discussion, we started to hone in on an idea that could give users the authoring flexibility of a word processor, yet the structure needed for things like searching, linking, and sign-off. In order to refine this idea, I created a quick JavaScript prototype which ended up being instrumental in getting buy-in and conveying the concept to the rest of the team.</p>
+    <p>We wanted to focus on a few areas that surfaced during our research:</p>
+
+    <ul>
+        <li>Test engineers work on their computers, while technicians are always on the move.</li>
+        <li>Worksheets are made up of a standard set of reusable components.</li>
+        <li>Technicians pass around a single worksheet to sign off on their respective tasks.</li>
+        <li>Some tasks are time-sensitive and need to be repeated if that threshold is exceeded.</li>
+        <li>Important items are referenced throughout the worksheet via lengthy serial numbers.</li>
+    </ul>
+
+    <p>After a few rounds of sketching and discussion, we started to hone in on an idea that could give users the authoring flexibility of a word processor, yet the structure needed for things like searching, linking, and sign-off. In order to refine this idea, I created a quick JavaScript prototype which helped in getting buy-in and conveying the concept to the rest of the team.</p>
 </section>
 
 <section>
     <h2>Our solution</h2>
-    <p>Our research identified that there are effectively two phases of the worksheet life-cycle: authoring and execution. We saw that the worksheet authors did all of their work at their desktop computers, while executors were constantly on the move. The system is designed to take advantage of the user's situation in each of these phases.</p>
+    <p>There are effectively two phases of the worksheet life-cycle — authoring and execution — and the system is designed to take advantage of the user's situation in each of these phases.</p>
 
-    <p>In the authoring phase, the system is designed for the engineers who will be creating documents on a standard, desktop web browser. The artifact analysis identified that a worksheet is made up of a standard set of components that can be tailored according to the specific test's needs. Our solution treats these components as building blocks that authors add and configure in whatever order needed.</p>
+    <p>In the authoring phase, the system is designed for the engineers creating documents on a standard, desktop web browser. Our artifact analysis identified that a worksheet is made up of a standard set of components that can be tailored according to the specific test's needs. So, we treat these components as building blocks that authors add and configure in whatever order needed.</p>
 
     <div class="figure">
         <img src="/assets/images/etws/authoring.png"\>
         <p class="caption">Engineers author a worksheet by adding and configuring standard elements.</p>
     </div>
 
-    <p>In the execution phase, the system is designed for the technicians and QA representatives who will be on the move. Once an engineer is finished authoring the document, the worksheet becomes available on a mobile device so executors can perform their work while moving around the complex. As they work, they can enter values and sign off on steps they've completed.</p>
+    <p>In the execution phase, the system is designed for the technicians and QA representatives executing tasks on the move. To mark a task complete, a technician must sign for it and, as you may expect, NASA culture is a bit of a stickler for authentication. In order to speed up that process, each technician uses a unique 4-digit PIN when marking a step complete.
 
     <div class="figure">
         <img src="/assets/images/etws/signing.png"\>
         <p class="caption">Users sign off on steps by entering their unique pin number.</p>
     </div>
+
+    <p>Some of these tasks are time sensitive, and if they take too long, then the work needs to be repeated and the entire test can be thrown off of schedule. In order to help the users keep track of these thresholds, the system automatically start a timer when an time-sensitive step begins.</p>
+
+    <div class="figure">
+        <img src="/assets/images/etws/timer.png"\>
+        <p class="caption">An active timer remains in view at all times and alerts the user when completed.</p>
+    </div>
+
+    <p>Test articles are referenced throughout a worksheet via their <em>16 character serial numbers</em>. This results in a lot of opportunity for error when referencing an item or swapping one out at the last minute. Additionally, entire worksheets are often copied for subsequent tests and only the serial numbers are changed. To reduce the possibility of error, authors can create variables to reference throughout the worksheet.</p>
+
+    <div class="figure">
+        <img src="/assets/images/etws/variables.png"\>
+        <p class="caption">If an author updates a veriable, then all references are updated along with it.</p>
+    </div>
+
 </section>
 
 <!--

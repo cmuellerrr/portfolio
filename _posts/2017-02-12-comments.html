@@ -13,7 +13,7 @@ role: Design lead
 completed: Feb 2017
 length: 4 weeks
 tools: Sketch, InVision, Flinto
-methods: competitive analysis, document analysis, interactive prototyping
+methods: retrospective interviews, competitive analysis, artifact analysis, interactive prototyping
 ---
 
 <section>
@@ -35,8 +35,9 @@ methods: competitive analysis, document analysis, interactive prototyping
 
     <ul>
         <li>Reviewers work in a silo and frequently submit duplicate comments.</li>
-        <li>The document author has to merge each reviewer's comments.</li>
+        <li>The document author has to merge each reviewer's comments into a central location.</li>
         <li>Document authors need to track a document version for each review round.</li>
+        <li>The discussion is separated from the data being discussed.</li>
     </ul>
 
     <div class="figure">
@@ -44,34 +45,53 @@ methods: competitive analysis, document analysis, interactive prototyping
         <p class="caption">Many organizations compile and disposition all comments in a separate spreadsheet. Image redacted.</p>
     </div>
 
-    <p>A centralized data system, in itself, helps to resolve most the above issues, but our framework currently only allows users to comment on a record as a whole, which separates the discussion from its context.</p>
+    <p>A centralized data system, in itself, helps to resolve a few of the above issues, but our framework only allows users to comment on a record as a whole, which still separates the discussion from its context.</p>
 
     <p><b>We sought to improve our commenting component by allowing users to comment directly on the data they are discussing.</b></p>
 </section>
 
 <section>
-    <h2>Our solution</h2>
+    <h2>Our process</h2>
+    <p>Even though there were already several known issues, we wanted to better understand the way our users actually handle their commenting processes. To do this, we conducted several retrospective interviews where users would walk us through their process, making sure to collect the associated artifacts (and then some) for further analysis. Additionally, our competitive analysis gave us insight into how other applications are handling commenting.</p>
 
-    <p>After several iterations and a competitive analysis of applications that provide commenting, we focused on a design that would be familiar to those accustomed to Word's commenting features<sup><a id="ref1" href="#fn1" title="Jump to footnote.">1</a></sup>. Discussions take place in the right-hand pane, and are toggled on and off with a button press.</p>
+    <p>Our research pointed to a few key areas we wanted to focus on:</p>
+
+    <ul>
+        <li>Comments are more effective when tightly coupled with the data being discussed.</li>
+        <li>Reviews are rarely one-sided and require ongoing discussion regarding a comment.</li>
+        <li>Users consider comments a to-do list, and prefer to hide comments once they have been resolved.</li>
+    </ul>
+
+    <p>Overall, we wanted to stick to a design that would be familiar to our users who typically use Word's commenting features<sup><a id="ref1" href="#fn1" title="Jump to footnote.">1</a></sup>, yet expanding on that functionality to address the issues found during our research.</p>
+</section>
+
+<section>
+    <h2>Our solution</h2>
+    <p>The data being reviewed in these processes is highly structured and, because it's important for comments to be closely coupled with the content being discussed, users may comment on each form field individually. However, comments aren't considered part of the <em>actual form data</em>, so our design aims to make that separation clear by moving the discussions to the right-hand gutter, outside of the form's borders.</p>
 
     <div class="figure">
         <img class="border" src="/assets/images/comments/field-level.png"\>
         <p class="caption">Review discussions take place directly in context.</p>
     </div>
 
-    <p>Our new design supports standard features like editing, deleting, and resolving. Additionally, our document analysis showed that most comment threads rarely go multiple levels deep, so we limited replies to a single level.</p>
+    <p>We know that reviews are often a back-and-forth, so each comment may be replied to arbitrarily by any user in the system. Additionally, each field may have an arbitrary number of discussion threads going on at any given time.</p>
 
     <div class="figure">
         <img src="/assets/images/comments/threading.png"\>
         <p class="caption">Users can reply to high-level comments to start a thread.</p>
     </div>
+
+    <p>After a discussion has taken place, the owner of the data needs to make changes where appropriate. To help keep track of which comments have already been addressed, users may mark comments as 'Resolved', hiding them from the comment list.</p>
+
+    <div class="figure">
+        <img src="/assets/images/comments/resolving.png"\>
+        <p class="caption">Resolved comments can still be viewed and re-opened if necessary.</p>
+    </div>
 </section>
 
 <section>
     <h2>Results</h2>
-    <p>We usability tested the new design with 10 participants, moving through a real-life scenario that required the use of each feature.</p>
-
-    <p>The tests resulted in the following:</p>
+    <p>We usability tested the new design with 10 participants, moving through a real-life scenario that required the use of each feature. The tests resulted in the following findings:</p>
 
     <ul>
         <li>Users easily formed a correct mental model of comment existence once identified.</li>
@@ -82,8 +102,7 @@ methods: competitive analysis, document analysis, interactive prototyping
         <li>The expected meaning of the icon badge varied across users.</li>
     </ul>
 
-    <p>The core commenting functions tested very well amongst our participants, with the majority of actionable feedback came from the handling of resolved comments. Contrary to our hypothesis, users were surprisingly cavalier in their desire to remove comments once resoled.</p>
-
+    <p>The core commenting functions tested very well amongst our participants, with the majority of feedback regarding the way resolved comments are handled. Contrary to our hypothesis, users were surprisingly cavalier in their desire to delete comments once addressed.</p>
 
     <div class="quote">
         <p>It's a lot easier to navigate here than it is in a Word document.</p>
@@ -92,5 +111,5 @@ methods: competitive analysis, document analysis, interactive prototyping
 </section>
 
 <section class="footnotes">
-    <p><sup id="fn1">1. With a little bit of Google Docs thrown in there too.<a href="#ref1" title="Jump to reference in the text.">&#8617;</a></sup></p>
+    <p><sup id="fn1">1. Google Docs is a popular option too.<a href="#ref1" title="Jump to reference in the text.">&#8617;</a></sup></p>
 </section>

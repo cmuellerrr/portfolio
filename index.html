@@ -4,53 +4,86 @@ class: home
 title: Home
 ---
 
-<div class="content home">
 
-    <section class="lead">
-        <img class="round" src="/assets/images/lowpolychris.png" alt="Me">
-        <h1>Hello, I'm Chris.</h1>
+<div class="chapter-wrapper">
 
-        <div class="intro">
-            <p>I'm a user experience designer currently working at <a href="http://www.nasa.gov/centers/ames/about/overview.html">NASA Ames Research Center</a> in Mountain View, CA. Check out some of my work below or head to my <a href="/about">about page</a> for more on me.</p>
+    <section class="chapter intro">
+        <div class="page page-left">
+            <img src="/assets/images/cover.svg" alt="The Golden Gate bridge.">
         </div>
-
-        <div class="intro-abridged">
-            <p>I'm a user experience designer. Currently @ <a href="http://www.nasa.gov/centers/ames/about/overview.html">NASA ARC</a>. Check out some of my work below.</p>
-        </div>
-
-        <div class="intro-links">
-            <p>
-                <a href="/assets/resume.pdf">R&eacute;sum&eacute;</a>
-                <a href="http://linkedin.com/in/cmuellerrr/">LinkedIn</a>
-                <a href="http://github.com/cmuellerrr/">GitHub</a>
-            </p>
-        </div>
-
+        <div class="page page-right">
+            <div class="page-text">
+                <h1>Hello. I'm Chris Mueller</h1>
+                <p>I’m a UX designer based in San Francisco, California. I focus on information architecture and design systems, but I espeically enjoy whitespace, consistency, and solving problems.</p>
+                <p>Check out some of my work, peep my resume, or learn some more things about me.</p>
+         </div>
+         <img class="scroll" src="/assets/images/scroll.svg" alt="A computer mouse">
     </section>
 
-    <section class="work-list clear">
-
-        {% for post in site.posts %}
-            {% if post.featured == true %}
-            <div class="excerpt">
-                <a href="{{ post.url }}">
-                    <div class="excerpt-icon icon-gray">
-                        <img src="/assets/images/{{ post.directory }}/icon-{{ post.directory }}.png"\>
-                    </div>
-                    <div class="excerpt-icon icon-color">
-                        <img src="/assets/images/{{ post.directory }}/icon-{{ post.directory }}-color.png"\>
-                    </div>
-                    <div class="excerpt-text">
-                        <h3 class="title">{{ post.title }}</h3>
-                        <p class="tagline">{{ post.tagline-short }}</p>
-                    </div>
-                </a>
+    <section class="chapter comments">
+        <div class="page page-left">
+            <img src="/assets/images/comments.svg" alt="A few speech bubbles.">
+        </div>
+        <div class="page page-right">
+            <div class="page-text">
+                <h2>Inline commenting on structured forms</h2>
+                <p>As you may expect, NASA engineering data gets reviewed a lot, often in Word and Excel. This requires merging and dispositioning review comments.</p>
+                <p>We made a mechanism for having review discussions directly on the centralized, structured data being reviewed.</p>
+                <p class="stat">32</p>
+                <p class="stat-caption">est. calendar days saved per review</p>
+                <a href="/work/comments">Read more...</a>
             </div>
-            {% endif %}
-        {% endfor %}
+        </div>
+    </section>
 
-        <p class="continue"><a href="/work">See all projects</a></p>
+    <section class="chapter signatures">
+        <div class="page page-left">
+            <img src="/assets/images/signatures.svg" alt="A phone with a checkmark.">
+        </div>
+        <div class="page page-right">
+            <div class="page-text">
+                <h2>Improving digital signatures</h2>
+                <p>Boy, NASA sure loves making people sign documents and the need for functional digital signatures is higher than ever.</p>
+                <p>Our previous interface for digital signatures needed improvements, so we re-designed the interactor to be easier to understand and use.</p>
+                <p class="stat">100%</p>
+                <p class="stat-caption">participant preference for new design</p>
+                <a href="/work/signatures">Read more...</a>
+            </div>
+        </div>
+    </section>
 
+    <section class="chapter tasks">
+        <div class="page page-left">
+            <img src="/assets/images/tasks.svg" alt="A tablet next to some tools.">
+        </div>
+        <div class="page page-right">
+            <div class="page-text">
+                <h2>Digitizing test setup</h2>
+                <p>The Ames Arc Jet Complex tests vehicle heat shielding by simulating flight- and re-entry conditions.</p>
+                <p>Working with the Arc Jet team, we created a desktop and mobile web application to improve their test setup process.</p>
+                <p class="stat">0</p>
+                <p class="stat-caption">incomplete worksheets</p>
+                <a href="/work/etws">Read more...</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="chapter procedures">
+        <div class="page page-left">
+            <img src="/assets/images/procedures.svg" alt="Sunglasses filled with stars and planets.">
+        </div>
+        <div class="page page-right">
+            <div class="page-text">
+                <h2>Head-mounted procedures (in space!)</h2>
+                <p>Astronauts on the International Space Station follow pre-written procedures for pretty much everything. Those procedures, and the mechanism for viewing them, have a lot of drawbacks.</p>
+                <p>We built a head-mounted procedure viewer prototype to help maximize crew efficiency.</p>
+                <p class="stat">27</p>
+                <p class="stat-caption">experts interviewed</p>
+                <p class="stat">6</p>
+                <p class="stat-caption">analogous domains researched</p>
+                <a href="/work/peer">Read more...</a>
+            </div>
+        </div>
     </section>
 
 </div>

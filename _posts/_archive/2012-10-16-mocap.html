@@ -1,8 +1,12 @@
 ---
 layout: post
-categories: projects
-title: "Human Motion"
-tagline: "Determining handedness through leotards, reflectors, and video tape."
+categories: work
+featured:
+directory: mocap
+title: "Human Motion Analysis"
+tagline: "Programatically determining hand dominance."
+tagline-short: "Determining hand dominance."
+classification: "Academic Study"
 team:
   - <a href="http://www.raymondliaw.com" target="_blank">Ray Liaw</a>
   - Josh Caputo
@@ -11,40 +15,17 @@ team:
   - Omri Amarilio
 completed: Oct 2012
 length: 4 weeks
-role: I focused on the capture and cleanup of the data.
 tools: Vicon motion capture system, MATLAB, Maya
-vimeo: http://player.vimeo.com/video/63447950?byline=0&amp;portrait=0
 ---
 
 <section>
-    <h2>TL;DR</h2>
-    <p>This project dealt with the analysis of human motion data to quantify the difference in how someone throws with their dominant hand as opposed to their non-dominant hand.</p>
+    <h2>Summary</h2>
 
-    <iframe class="fill" src="{{ page.vimeo }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-</section>
+    <p>We captured test subjects throwing a ball with both of their hands. We analyzed that data in an attempt to quantify the difference in how someone throws with their dominant hand as opposed to their non-dominant hand.</p>
 
-<section>
-	<h2>Process</h2>
-	<p>Conceptually, motion capture is pretty simple: use cameras to track distinct joints on a body and build a skeleton around it. The hard part is calibrating the cameras, placing the markers, and cleaning up the data. After we completed the capture and cleanup, the resulting data was analyzed using MATLAB.</p>
-	<img class="fill" src="/assets/images/mocap/suited.jpg"\>
-	<img class="fill" src="/assets/images/mocap/rom.png"\>
-	<img class="fill" src="/assets/images/mocap/punch.png"\>
-	<img class="fill" src="/assets/images/mocap/kick.png"\>
-	<img class="fill" src="/assets/images/mocap/crouch.png"\>
-	<img class="fill" src="/assets/images/mocap/jump.png"\>
-	<img class="fill" src="/assets/images/mocap/throwdom.png"\>
-	<img class="fill" src="/assets/images/mocap/thrownon.png"\>
-	<img class="fill" src="/assets/images/mocap/walk.png"\>
-	<img class="fill" src="/assets/images/mocap/walk2run.png"\>
-	<img class="fill" src="/assets/images/mocap/run.png"\>
-	<img class="fill" src="/assets/images/mocap/run2walk.png"\>
-	<img class="fill" src="/assets/images/mocap/gangnam.png"\>
-</section>
-
-<section>
-	<h2>Results</h2>
-	<p>We hypothesized that either the distance the arm traveled backwards during windup or the smoothness of the arm motion would be a deciding factor in predicting handedness, but neither showed any consistent correlation. Even so, it turns out that the peak velocity of the arm was a pretty good indicator of which hand was dominant; correctly predicting 8 out of 9 subjects.</p>
-	<img class="fill" src="/assets/images/mocap/results.png"\>
-
-	<p>However being that there were only 9 subjects, this can’t actually be considered statistically significant, but it’s interesting nonetheless.</p>
+    <div class="figure">
+        <div class="videoWrapper">
+            <iframe src="http://player.vimeo.com/video/63447950?byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+    </div>
 </section>

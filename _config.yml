@@ -3,7 +3,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://iammueller.com" # the base hostname & protocol for your site
 permalink: /:categories/:title
 
-title: MUELLER
+title: I AM MUELLER
 description: > # this means to ignore newlines
   The personal website of Chris Mueller, an interaction designer and software developer.
 

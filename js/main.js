@@ -7,6 +7,8 @@ window.onload = function () {
         }
     });
 
+    $(window).scroll();
+
     //Handle setting the current section of the home page
     function handleScroll(elem) {
         if (isScrolledIntoView(elem) && !elem.classList.contains('current')) {

@@ -1,7 +1,4 @@
-/*
-  #A5A7BB
-  #536FFF
-*/
+
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -11,304 +8,239 @@
   box-sizing: border-box;
 }
 
-/* Typography */
-
 html, body {
-  color: #333;
-  font-family: 'PT Sans', sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+    height: 100%;
+    color: #434d54;
+    font-family: 'Domine', sans-serif;
+    font-size: 16px;
+    line-height: 30px;
 }
 
 h1 {
-  font-size: 38px;
-  font-weight: 700;
-  line-height: 48px;
-  margin-top: 48px;
-  margin-bottom: 24px;
+    font-size: 28px;
+    font-weight: 700;
 }
 
 h2 {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 48px;
-  margin-top: 48px;
-  margin-bottom: 24px;
-}
-
-h3 {
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 24px;
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
-
-h4 {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
-
-p, ul, ol, pre, table, blockquote {
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
-
-hr {
-  border: 1px solid;
-  margin: -1px 0;
-}
-
-ul ul, ol ol, ul ol, ol ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-b, strong, em, small, code {
-  line-height: 1;
-}
-
-sup, sub {
-  vertical-align: baseline;
-  position: relative;
-  top: -0.4em;
-}
-
-sub {
-  top: 0.4em;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 a {
-  color: inherit;
+    color: #F49322;
 }
 
-/* General */
 
-.content {
-  width: 700px;
-  padding: 0 20px;
-  margin-left: auto;
-  margin-right: auto;
+/** HOME PAGE **/
+
+.chapters-wrapper {
+    height: 100%;
 }
 
-section {
+
+/**
+.chapter {
+    height: 100%;
+    display: flex;
+}
+
+.page {
+    height: 100%;
+    width: 50%;
+    padding: 34px;
+    display: flex;
+    position: relative;
+}
+**/
+
+
+.chapter {
+    height: 100%;
+}
+
+.page {
+    display: flex;
+    position: relative;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    padding: 34px;
+}
+
+.page-left {
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0;
+
+    -moz-transition: opacity 0.3s ease-out;
+    -ms-transition: opacity 0.3s ease-out;
+    -o-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+}
+
+.page-right {
+    left: 50%;
+}
+
+.intro .page-left,
+.current .page-left {
+    opacity: 100;
+}
+
+
+
+.page-left img {
+    height: 90%;
+    width: 90%;
+    margin: auto;
+}
+
+.page-text {
+    width: 500px;
+    margin: auto;
+}
+
+.stat {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.stat-caption {
+    margin-top: 0;
+}
+
+/** PAGE STYLES **/
+
+.intro .page-left {
+    background: #F49322;
+    opacity: 100;
+}
+
+.intro .salutation {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.intro .scroll {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.comments .page-left {
+    background: #542B56;
+}
+
+.comments .page-right .stat,
+.comments .page-right a {
+    color: #542B56;
+}
+
+.signatures .page-left {
+    background: #F49322;
+}
+
+.signatures .page-right .stat,
+.signatures .page-right a {
+    color: #F49322;
+}
+
+.tasks .page-left {
+    background: #DD547D;
+}
+
+.tasks .page-right .stat,
+.tasks .page-right a {
+    color: #DD547D;
+}
+
+.procedures .page-left {
+    background: #A23B72;
+}
+
+.procedures .page-right .stat,
+.procedures .page-right a {
+    color: #A23B72;
+}
+
+
+/** tablet **/
+@media only screen
+and (max-width : 768px) {
+/**
+    .chapter {
+        height: auto !important;
+        display: initial;
+    }
+
+    .page {
+        height: auto;
+        width: 100%;
+    }
+
+    .page-right {
+        padding-top: 68px;
+        padding-bottom: 68px;
+    }
+**/
+
+
+    .chapter {
+        height: auto !important;
+    }
+
+    .page {
+        top: initial;
+        width: 100%;
+        height: auto;
+    }
+
+    .page-left {
+        position: initial;
+        opacity: 100;
+    }
+
+    .page-right {
+        left: initial;
+        padding-top: 68px;
+        padding-bottom: 68px;
+    }
+
+    .intro .scroll {
+        display: none;
+    }
+
+}
+
+/** PROJECT **/
+
+.project {
+    max-width: 700px;
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project header {
+    margin-top: 50px;
+}
+
+.project section {
   margin-top: 100px;
   margin-bottom: 100px;
 }
-
-/*
-.outer-wrapper {
-  position: fixed;
-  width: 100%;
-}
-
-.outer-content {
-  width: 980px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 300px;
-}
-
-.back {
-  width: 75px;
-  height: 75px;
-  background: whitesmoke;
-}
-*/
-
-
-/* Header */
-
-header {
-  height: 80px;
-  padding-top: 30px;
-  background: #F1F1F1;
-  color: #AAA;
-}
-
-header .logo {
-  float: left;
-}
-
-header .logo a {
-  display: block;
-
-  -webkit-transition: color .25s;
-  -moz-transition: color .25s;
-  -o-transition: color .25s;
-  transition: color .25s;
-}
-
-header nav {
-  float: right;
-}
-
-header nav a {
-  margin-left: 25px;
-  text-decoration: none;
-
-  -webkit-transition: color .25s;
-  -moz-transition: color .25s;
-  -o-transition: color .25s;
-  transition: color .25s;
-}
-
-header .logo a:hover,
-header nav a:hover {
-  color: #ff5959;
-}
-
-header .logo a,
-header nav a {
-  font-weight: 700;
-  text-decoration: none;
-}
-
-
-/* Footer */
-
-footer {
-  padding: 100px 0 50px;
-  font-size: 11px;
-  text-align: center;
-  color: #AAA;
-}
-
-
-/* Intro */
-
-.home .lead {
-  text-align: center;
-}
-
-.intro-abridged {
-  display: none;
-}
-
-.intro-links a {
-  margin-right: 10px;
-}
-
-.intro-links a:last-child {
-  margin-right: 0;
-}
-
-.contact {
-  margin-top: 20px;
-  font-size: 14px;
-}
-
-
-/* Excerpts */
-
-.work-list {
-  margin-top: 150px;
-}
-
-.excerpt {
-  float: left;
-  width: 48%;
-  margin: 20px auto;
-  position: relative;
-}
-
-.excerpt:nth-child(odd) {
-  margin-right: 4%;
-}
-
-.excerpt a {
-  display: block;
-  height: 100%;
-  width: 100%;
-  padding: 20px 10px;
-
-  text-decoration: none;
-
-  -webkit-transition: box-shadow .25s;
-  -moz-transition: box-shadow .25s;
-  -o-transition: box-shadow .25s;
-  transition: box-shadow .25s;
-}
-
-.excerpt a:hover {
-  /*box-shadow: 0px 1px 2px #ccc;*/
-}
-
-.excerpt-text {
-  margin-left: 70px;
-}
-
-.excerpt-icon {
-  position: absolute;
-
-  -webkit-transition: opacity .25s;
-  -moz-transition: opacity .25s;
-  -o-transition: opacity .25s;
-  transition: opacity .25s;
-}
-
-.excerpt-icon.icon-gray,
-.excerpt a:hover .excerpt-icon.icon-color {
-  opacity: 1;
-}
-
-.excerpt-icon.icon-color,
-.excerpt a:hover .excerpt-icon.icon-gray {
-  opacity: 0;
-}
-
-.excerpt .title {
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-
-.excerpt .tagline {
-  margin: 0;
-  color: #aaa;
-}
-
-
-/* About */
-
-.about .lead {
-  text-align: center;
-}
-
-.about.content .lead p {
-  text-align: left;
-}
-
-
-/* Work */
-
-.work .lead {
-  text-align: center;
-}
-
-.work.content .lead p {
-  text-align: left;
-}
-
-
-/* Project */
 
 .project .lead h1 {
   margin-top: 0;
   margin-bottom: 10px;
 }
 
-.project .lead .tagline {
-  margin: 0;
-  color: #aaa;
-  font-size: 20px;
-}
-
 .project .meta {
   margin-top: 25px;
   font-size: 14px;
+  line-height: 26px;
 }
 
 .project .meta p {
@@ -320,6 +252,7 @@ footer {
   margin-top: 50px;
   text-align: center;
   font-size: 14px;
+  line-height: 26px;
   color: #AAA;
 }
 
@@ -365,7 +298,7 @@ footer {
 }
 
 sup a {
-  color: #ff6153;
+  color: #F49322;
   text-decoration: none;
 }
 
@@ -374,7 +307,9 @@ sup a {
 }
 
 
-/* Utility */
+
+
+/** UTILITY **/
 
 .clear:after {
   clear: both;
@@ -403,55 +338,4 @@ img.border {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-
-
-/* SD size */
-@media only screen
-and (max-width : 1024px) {
-
-}
-
-/* Tablet-ish size */
-@media only screen
-and (max-width : 750px) {
-
-  .excerpt {
-    width: 100%;
-    margin-right: 0;
-    float: none;
-  }
-
-  .excerpt a {
-    box-shadow: 0px 1px 2px #ccc;
-  }
-
-}
-
-/* Breaking content width */
-@media only screen
-and (max-width : 700px) {
-
-  .content {
-    width: auto;
-  }
-
-}
-
-/* Mobile-ish size */
-@media only screen
-and (max-width : 400px) {
-
-  .intro {
-    display: none;
-  }
-
-  .intro-abridged {
-    display: block;
-  }
-
-  .figure.mobile {
-    width: 100%;
-  }
 }

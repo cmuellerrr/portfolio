@@ -3,11 +3,13 @@ layout: default
 class: project
 ---
 
-<div class="content project">
+
+  <header>
+    <a href="/">&larr; Home</a>
+  </header>
 
   <section class="lead">
     <h1>{{ page.title }}</h1>
-    <p class="tagline">{{ page.tagline }}</p>
 
     <div class="meta">
       {% if page.team != null %}
@@ -30,4 +32,3 @@ class: project
 
   {{ content }}
 
-</div>

@@ -10,7 +10,7 @@
 
 html, body {
     height: 100%;
-    color: #4A4A4A;
+    color: #434d54;
     font-family: 'Domine', sans-serif;
     font-size: 16px;
     line-height: 30px;
@@ -33,7 +33,7 @@ a {
 
 /** HOME PAGE **/
 
-.chapter-wrapper {
+.chapters-wrapper {
     height: 100%;
 }
 
@@ -79,10 +79,14 @@ a {
     opacity: 100;
 }
 
+.intro .salutation {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
 .intro .scroll {
-    position: absolute;
-    bottom: 20%;
-    left: 50%;
+    text-align: center;
+    margin-top: 100px;
 }
 
 .comments .page-left {
@@ -161,6 +165,10 @@ and (max-width : 768px) {
     margin-right: auto;
 }
 
+.project header {
+    margin-top: 50px;
+}
+
 .project section {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -171,15 +179,10 @@ and (max-width : 768px) {
   margin-bottom: 10px;
 }
 
-.project .lead .tagline {
-  margin: 0;
-  color: #aaa;
-  font-size: 20px;
-}
-
 .project .meta {
   margin-top: 25px;
   font-size: 14px;
+  line-height: 26px;
 }
 
 .project .meta p {
@@ -191,6 +194,7 @@ and (max-width : 768px) {
   margin-top: 50px;
   text-align: center;
   font-size: 14px;
+  line-height: 26px;
   color: #AAA;
 }
 

@@ -50,6 +50,41 @@ a {
     position: relative;
 }
 
+
+/**
+.chapter {
+    height: 100%;
+}
+
+.page {
+    display: flex;
+    position: relative;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    padding: 34px;
+}
+
+.page-left {
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0;
+
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.page-left {
+    opacity: 100;
+}
+
+.page-right {
+    left: 50%;
+}
+**/
 .page-left img {
     height: 90%;
     width: 90%;
@@ -145,11 +180,28 @@ and (max-width : 768px) {
         padding-bottom: 68px;
     }
 
-    .page-text {
-        font-size: inherit;
-        line-height: inherit;
+/**
+    .chapter {
+        height: auto !important;
     }
 
+    .page {
+        top: initial;
+        width: 100%;
+        height: auto;
+    }
+
+    .page-left {
+        position: initial;
+        opacity: 100;
+    }
+
+    .page-right {
+        left: initial;
+        padding-top: 68px;
+        padding-bottom: 68px;
+    }
+**/
     .intro .scroll {
         display: none;
     }

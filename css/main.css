@@ -37,6 +37,8 @@ a {
     height: 100%;
 }
 
+
+/**
 .chapter {
     height: 100%;
     display: flex;
@@ -49,9 +51,9 @@ a {
     display: flex;
     position: relative;
 }
+**/
 
 
-/**
 .chapter {
     height: 100%;
 }
@@ -77,14 +79,17 @@ a {
     transition: all 0.3s ease-out;
 }
 
-.page-left {
-    opacity: 100;
-}
-
 .page-right {
     left: 50%;
 }
-**/
+
+.intro .page-left,
+.current .page-left {
+    opacity: 100;
+}
+
+
+
 .page-left img {
     height: 90%;
     width: 90%;
@@ -164,7 +169,7 @@ a {
 /** tablet **/
 @media only screen
 and (max-width : 768px) {
-
+/**
     .chapter {
         height: auto !important;
         display: initial;
@@ -179,8 +184,9 @@ and (max-width : 768px) {
         padding-top: 68px;
         padding-bottom: 68px;
     }
+**/
 
-/**
+
     .chapter {
         height: auto !important;
     }
@@ -201,7 +207,9 @@ and (max-width : 768px) {
         padding-top: 68px;
         padding-bottom: 68px;
     }
-**/
+
+
+
     .intro .scroll {
         display: none;
     }

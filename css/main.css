@@ -138,13 +138,22 @@ a {
     color: #542B56;
 }
 
-.signatures .page-left {
-    background: #F49322;
+.jdpower .page-left {
+    background: #CC0039;
 }
 
-.signatures .page-right .stat,
-.signatures .page-right a {
-    color: #F49322;
+.jdpower .page-right .stat,
+.jdpower .page-right a {
+    color: #CC0039;
+}
+
+.vlocity .page-left {
+    background: #4197AE;
+}
+
+.vlocity .page-right .stat,
+.vlocity .page-right a {
+    color: #4197AE;
 }
 
 .tasks .page-left {
@@ -284,6 +293,12 @@ and (max-width : 768px) {
   margin: 0;
   font-size: 12px;
 }
+
+.shadow img {
+  box-shadow: 0 2px 16px 0 #CCCCCC;
+}
+
+
 
 .quote {
   margin-left: 25px;

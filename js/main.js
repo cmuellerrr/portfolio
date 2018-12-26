@@ -1,7 +1,7 @@
 window.onload = function () {
 
-    console.log("Well hello there!");
-    console.log("You know, I always check to see if people made their own sites too.");
+    console.log("Well, hello there!");
+    console.log("I always check to see if people made their own sites too.");
     console.log("Feel free to check out the source on github if you want to see more: https://github.com/cmuellerrr/portfolio");
 
     $(window).scroll(function (event) {

@@ -226,10 +226,10 @@ and (max-width : 768px) {
 /** PROJECT **/
 
 .project {
-    max-width: 700px;
     padding: 0 20px;
     margin-left: auto;
     margin-right: auto;
+    overflow-x: hidden;
 }
 
 .project header {
@@ -237,8 +237,25 @@ and (max-width : 768px) {
 }
 
 .project section {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  padding-top: 128px;
+  padding-bottom: 128px;
+}
+
+.project section .sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 32px;
+}
+
+.project section .extended {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  margin-top: 64px;
 }
 
 .project .lead h1 {
@@ -246,15 +263,13 @@ and (max-width : 768px) {
   margin-bottom: 10px;
 }
 
-.project .meta {
-  margin-top: 25px;
-  font-size: 14px;
-  line-height: 26px;
+.project .lead .extended {
+  margin-bottom: 64px;
 }
 
-.project .meta p {
-  margin-top: 0;
-  margin-bottom: 0;
+.tagline {
+  font-size: 22px;
+  color: #9D9D9D;
 }
 
 .continue {
@@ -274,10 +289,8 @@ and (max-width : 768px) {
   margin: 0;
 }
 
-.figure,
-.quote {
-  margin-top: 50px;
-  margin-bottom: 50px;
+.figure.offset-vertical {
+  margin-top: 128px;
 }
 
 .figure.mobile {
@@ -297,8 +310,6 @@ and (max-width : 768px) {
 .shadow img {
   box-shadow: 0 2px 16px 0 #CCCCCC;
 }
-
-
 
 .quote {
   margin-left: 25px;
@@ -322,7 +333,15 @@ sup a {
 }
 
 
-
+/** tablet **/
+@media only screen
+and (max-width : 768px) {
+  .project section .sticky {
+    position: unset;
+    position: unset;
+    top: unset;
+  }
+}
 
 /** UTILITY **/
 
@@ -330,6 +349,10 @@ sup a {
   clear: both;
   display: table;
   content: "";
+}
+
+.light{
+  color: #9D9D9D;
 }
 
 img.round {

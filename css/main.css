@@ -254,8 +254,8 @@ and (max-width : 768px) {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-
-  margin-top: 64px;
+  margin-top: 128px;
+  margin-bottom: 128px;
 }
 
 .project .lead h1 {
@@ -323,6 +323,16 @@ and (max-width : 768px) {
   text-align: right;
 }
 
+.results {
+  background: #FBFBFB;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.results .quote {
+  margin-top: 125px;
+}
+
 sup a {
   color: #F49322;
   text-decoration: none;
@@ -340,6 +350,14 @@ and (max-width : 768px) {
     position: unset;
     position: unset;
     top: unset;
+  }
+}
+
+/** mobile **/
+@media only screen
+and (max-width : 550px) {
+  .figure.offset-vertical {
+    margin-top: 32px;
   }
 }
 

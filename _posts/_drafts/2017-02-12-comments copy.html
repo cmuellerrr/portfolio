@@ -13,39 +13,64 @@ tools: Sketch, InVision, Flinto
 methods: retrospective interviews, competitive analysis, artifact analysis, interactive prototyping
 ---
 
-<div class="old">
-<section>
-    <h2>Summary</h2>
-    <p>NASA organizations often store their authoritative data in Word documents and rely on built-in commenting features to facilitate their baseline reviews. As more and more orgs move to centralized, structured data systems, they need new tools to support those review processes. We designed a mechanism for users to have review discussions directly on the data they are reviewing.</p>
 
-    <!--
-    <div class="figure">
-        <img src="/assets/images/ecofr/overview.jpg"\>
+<section class="container lead">
+    <div class="row">
+        <div class="nine columns">
+            <h1>NASA</h1>
+            <p class="tagline">{{ page.title }}</p>
+            <p>Many NASA organizations store their authoritative data in Word documents and rely on inefficient processes to facilitate their baseline reviews. We design a mechanism to dramatically streamline that review process.</p>
+        </div>
     </div>
-    -->
+<!--
+    <div class="row extended" style="background: #F53C3C;">
+        <div class="figure">
+            <img src="/assets/images/jdp/hero.png"\>
+        </div>
+    </div>
+-->
+    <h2>Background</h2>
+    <div class="row">
+        <div class="nine columns">
+            As you may expect, NASA engineering data gets reviewed...a lot, requiring the owner to merge and address comments from tons of documents in various locations. This takes a tremendous amount of time, and as more and more orgs move to centralized, structured data systems, they need new tools to support those review processes.</p>
 
-    <p class="continue">Keep reading for more details on our process</p>
+            <p>We sought to improve this process by centralizing the data being reviewed and designing tools allowing review discussions to take place alongside the data itself.</p>
+        </div>
+        <div class="two columns offset-by-one">
+            <div class="meta">
+                <p><b>Team:</b></br><span class="light">NASA Ames HCI Group</span></p>
+                <p><b>Role:</b></br><span class="light">{{ page.role }}</span></p>
+                <p><b>Completed:</b></br><span class="light">{{ page.completed }}</span></p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section>
-    <h2>The challenge</h2>
-    <p>Reviewing and discussing data is a common use case for NASA organizations. Typically, these organizations use emails, spreadsheets, or Word's commenting feature for their reviews. That approach has several issues:</p>
+<section class="container">
+    <div class="row">
+        <div class="five columns">
+        <h2>The challenge</h2>
+        <p>Reviewing and discussing data is a common use case for NASA organizations. Typically, these organizations use emails, spreadsheets, or Word's commenting feature for their reviews. That approach has several issues:</p>
 
-    <ul>
-        <li>Reviewers work in a silo and frequently submit duplicate comments.</li>
-        <li>The document author has to merge each reviewer's comments into a central location.</li>
-        <li>Document authors need to track a document version for each review round.</li>
-        <li>The discussion is separated from the data being discussed.</li>
-    </ul>
-
-    <div class="figure">
-        <img src="/assets/images/comments/comment-sheet.png"\>
-        <p class="caption">Many organizations compile and disposition all comments in a separate spreadsheet. Image redacted.</p>
+        <ul>
+            <li>Reviewers work in a silo and frequently submit duplicate comments.</li>
+            <li>The document author has to merge each reviewer's comments into a central location.</li>
+            <li>Document authors need to track a document version for each review round.</li>
+            <li>The discussion is separated from the data being discussed.</li>
+        </ul>
     </div>
-
-    <p>A centralized data system, in itself, helps to resolve a few of the above issues, but our framework only allows users to comment on a record as a whole, which still separates the discussion from its context.</p>
-
-    <p><b>We sought to improve our commenting component by allowing users to comment directly on the data they are discussing.</b></p>
+    </div>
+    <div class="row">
+        <div class="figure">
+            <img src="/assets/images/comments/comment-sheet.png"\>
+            <p class="caption">Many organizations compile and disposition all comments in a separate spreadsheet. Image redacted.</p>
+        </div>
+</div>
+<div class="row">
+        <div class="five columns">
+        <p>A centralized data system, in itself, helps to resolve a few of the above issues, but our framework only allows users to comment on a record as a whole, which still separates the discussion from its context. So, we needed to improve our commenting component to allowing users to comment directly on the data they are discussing.</p>
+    </div>
+        </div>
 </section>
 
 <section>

@@ -88,8 +88,6 @@ a {
     opacity: 100;
 }
 
-
-
 .page-left img {
     height: 90%;
     width: 90%;
@@ -263,10 +261,6 @@ and (max-width : 768px) {
   margin-bottom: 10px;
 }
 
-.project .lead .extended {
-  margin-bottom: 64px;
-}
-
 .tagline {
   font-size: 22px;
   color: #9D9D9D;
@@ -316,7 +310,9 @@ and (max-width : 768px) {
   margin-right: 25px;
 
   font-family: "Permanent Marker";
-  font-size: 20px;
+  font-size: 28px;
+  line-height: 36px;
+  color: #9D9D9D;
 }
 
 .quote .attribution {
@@ -330,7 +326,7 @@ and (max-width : 768px) {
 }
 
 .results .quote {
-  margin-top: 125px;
+  margin-top: 100px;
 }
 
 sup a {
@@ -341,6 +337,28 @@ sup a {
 .footnotes {
   border-top: 1px solid #c0c0c0;
 }
+
+
+
+.old {
+  max-width: 700px;
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.old .quote {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  font-family: "Permanent Marker";
+  font-size: 20px;
+  line-height: 30px;
+  color: #434d54;
+}
+
 
 
 /** tablet **/

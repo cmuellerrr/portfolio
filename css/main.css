@@ -35,7 +35,8 @@ p.tagline {
 }
 
 a {
-    color: #F49322;
+    color: #434d54;
+    font-style: underline;
 }
 
 
@@ -44,23 +45,6 @@ a {
 .chapters-wrapper {
     height: 100%;
 }
-
-
-/**
-.chapter {
-    height: 100%;
-    display: flex;
-}
-
-.page {
-    height: 100%;
-    width: 50%;
-    padding: 34px;
-    display: flex;
-    position: relative;
-}
-**/
-
 
 .chapter {
     height: 100%;
@@ -156,50 +140,27 @@ a {
     margin-top: 100px;
 }
 
-.comments .page-left {
-    background: #542B56;
-}
-
-.comments .page-right .stat,
-.comments .page-right a {
-    color: #542B56;
-}
-
 .jdpower .page-left {
     background: #F53C3C;
 }
 
+/**
 .jdpower .page-right .stat,
 .jdpower .page-right a {
     color: #F53C3C;
 }
+**/
 
 .vlocity .page-left {
     background: #0077F5;
 }
 
+/**
 .vlocity .page-right .stat,
 .vlocity .page-right a {
     color: #0077F5;
 }
-
-.tasks .page-left {
-    background: #DD547D;
-}
-
-.tasks .page-right .stat,
-.tasks .page-right a {
-    color: #DD547D;
-}
-
-.procedures .page-left {
-    background: #A23B72;
-}
-
-.procedures .page-right .stat,
-.procedures .page-right a {
-    color: #A23B72;
-}
+**/
 
 
 /** tablet **/
@@ -278,6 +239,10 @@ and (max-width : 768px) {
   margin-bottom: 128px;
 }
 
+.project section.lead .row:first-child {
+  margin-bottom: 64px;
+}
+
 .project section .row:last-child {
   margin-bottom: 0;
 }
@@ -291,14 +256,6 @@ and (max-width : 768px) {
   margin-right: -50vw;
 }
 
-.continue {
-  margin-top: 50px;
-  text-align: center;
-  font-size: 14px;
-  line-height: 26px;
-  color: #AAA;
-}
-
 .note {
   background: #fff0d7;
   padding: 15px;
@@ -306,6 +263,10 @@ and (max-width : 768px) {
 
 .note p {
   margin: 0;
+}
+
+.extended .figure {
+  line-height: 0;
 }
 
 .figure.offset-vertical {
@@ -319,6 +280,11 @@ and (max-width : 768px) {
 
 .figure img {
   width: 100%;
+  margin-top: 32px;
+}
+
+.figure img:first-child {
+  margin-top: 0;
 }
 
 .figure.shadow img {

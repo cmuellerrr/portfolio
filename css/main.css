@@ -19,6 +19,7 @@ html, body {
 h1 {
     font-size: 28px;
     font-weight: 700;
+    margin: 8px 0;
 }
 
 h2 {
@@ -26,8 +27,16 @@ h2 {
     font-weight: 700;
 }
 
+p.tagline {
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 32px;
+  color: #9D9D9D;
+}
+
 a {
-    color: #F49322;
+    color: #434d54;
+    font-style: underline;
 }
 
 
@@ -36,23 +45,6 @@ a {
 .chapters-wrapper {
     height: 100%;
 }
-
-
-/**
-.chapter {
-    height: 100%;
-    display: flex;
-}
-
-.page {
-    height: 100%;
-    width: 50%;
-    padding: 34px;
-    display: flex;
-    position: relative;
-}
-**/
-
 
 .chapter {
     height: 100%;
@@ -64,7 +56,7 @@ a {
     top: 0;
     width: 50%;
     height: 100%;
-    padding: 34px;
+    padding: 32px;
 }
 
 .page-left {
@@ -79,6 +71,16 @@ a {
     transition: opacity 0.3s ease-out;
 }
 
+.page-left.full {
+  padding: 0;
+  overflow: hidden;
+}
+
+.page-left.full img {
+  object-fit: cover;
+  margin: initial;
+}
+
 .page-right {
     left: 50%;
 }
@@ -88,11 +90,10 @@ a {
     opacity: 100;
 }
 
-
-
 .page-left img {
-    height: 90%;
-    width: 90%;
+    display: block;
+    width: 100%;
+    height: auto;
     margin: auto;
 }
 
@@ -119,9 +120,19 @@ a {
     opacity: 100;
 }
 
+.intro .page-left img {
+  height: 90%;
+  width: 90%;
+  margin: auto;
+}
+
 .intro .salutation {
     text-align: center;
     margin-bottom: 100px;
+}
+
+.intro h1 {
+  margin-bottom: 24px;
 }
 
 .intro .scroll {
@@ -129,50 +140,27 @@ a {
     margin-top: 100px;
 }
 
-.comments .page-left {
-    background: #542B56;
-}
-
-.comments .page-right .stat,
-.comments .page-right a {
-    color: #542B56;
-}
-
 .jdpower .page-left {
-    background: #CC0039;
+    background: #F53C3C;
 }
 
+/**
 .jdpower .page-right .stat,
 .jdpower .page-right a {
-    color: #CC0039;
+    color: #F53C3C;
 }
+**/
 
 .vlocity .page-left {
-    background: #4197AE;
+    background: #0077F5;
 }
 
+/**
 .vlocity .page-right .stat,
 .vlocity .page-right a {
-    color: #4197AE;
+    color: #0077F5;
 }
-
-.tasks .page-left {
-    background: #DD547D;
-}
-
-.tasks .page-right .stat,
-.tasks .page-right a {
-    color: #DD547D;
-}
-
-.procedures .page-left {
-    background: #A23B72;
-}
-
-.procedures .page-right .stat,
-.procedures .page-right a {
-    color: #A23B72;
-}
+**/
 
 
 /** tablet **/
@@ -226,10 +214,10 @@ and (max-width : 768px) {
 /** PROJECT **/
 
 .project {
-    max-width: 700px;
     padding: 0 20px;
     margin-left: auto;
     margin-right: auto;
+    overflow-x: hidden;
 }
 
 .project header {
@@ -237,32 +225,35 @@ and (max-width : 768px) {
 }
 
 .project section {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  padding-top: 128px;
+  padding-bottom: 128px;
 }
 
-.project .lead h1 {
-  margin-top: 0;
-  margin-bottom: 10px;
+.project section .sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 32px;
 }
 
-.project .meta {
-  margin-top: 25px;
-  font-size: 14px;
-  line-height: 26px;
+.project section .row {
+  margin-bottom: 128px;
 }
 
-.project .meta p {
-  margin-top: 0;
+.project section.lead .row:first-child {
+  margin-bottom: 64px;
+}
+
+.project section .row:last-child {
   margin-bottom: 0;
 }
 
-.continue {
-  margin-top: 50px;
-  text-align: center;
-  font-size: 14px;
-  line-height: 26px;
-  color: #AAA;
+.project section .extended {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .note {
@@ -274,10 +265,12 @@ and (max-width : 768px) {
   margin: 0;
 }
 
-.figure,
-.quote {
-  margin-top: 50px;
-  margin-bottom: 50px;
+.extended .figure {
+  line-height: 0;
+}
+
+.figure.offset-vertical {
+  margin-top: 128px;
 }
 
 .figure.mobile {
@@ -287,6 +280,15 @@ and (max-width : 768px) {
 
 .figure img {
   width: 100%;
+  margin-top: 32px;
+}
+
+.figure img:first-child {
+  margin-top: 0;
+}
+
+.figure.shadow img {
+  box-shadow: 0 2px 16px 0 #CCCCCC;
 }
 
 .figure .caption {
@@ -294,22 +296,28 @@ and (max-width : 768px) {
   font-size: 12px;
 }
 
-.shadow img {
-  box-shadow: 0 2px 16px 0 #CCCCCC;
-}
-
-
-
 .quote {
   margin-left: 25px;
   margin-right: 25px;
 
   font-family: "Permanent Marker";
-  font-size: 20px;
+  font-size: 28px;
+  line-height: 36px;
+  color: #9D9D9D;
 }
 
 .quote .attribution {
   text-align: right;
+}
+
+.results {
+  background: #FBFBFB;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.results .quote {
+  margin-top: 100px;
 }
 
 sup a {
@@ -323,6 +331,44 @@ sup a {
 
 
 
+.old {
+  max-width: 700px;
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.old .quote {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  font-family: "Permanent Marker";
+  font-size: 20px;
+  line-height: 30px;
+  color: #434d54;
+}
+
+
+
+/** tablet **/
+@media only screen
+and (max-width : 768px) {
+  .project section .sticky {
+    position: unset;
+    position: unset;
+    top: unset;
+  }
+}
+
+/** mobile **/
+@media only screen
+and (max-width : 550px) {
+  .figure.offset-vertical {
+    margin-top: 32px;
+  }
+}
 
 /** UTILITY **/
 
@@ -330,6 +376,10 @@ sup a {
   clear: both;
   display: table;
   content: "";
+}
+
+.light{
+  color: #9D9D9D;
 }
 
 img.round {

@@ -59,9 +59,9 @@ a {
     padding: 32px;
 }
 
-.page-left {
+.page-cover {
     position: fixed;
-    left: 0;
+    left: 50%;
     top: 0;
     opacity: 0;
 
@@ -71,30 +71,25 @@ a {
     transition: opacity 0.3s ease-out;
 }
 
-.page-left.full {
-  padding: 0;
-  overflow: hidden;
-}
-
-.page-left.full img {
-  object-fit: cover;
-  margin: initial;
-}
-
-.page-right {
-    left: 50%;
-}
-
-.intro .page-left,
-.current .page-left {
-    opacity: 100;
-}
-
-.page-left img {
+.page-cover img {
     display: block;
     width: 100%;
     height: auto;
     margin: auto;
+}
+
+.page-cover.full {
+  padding: 0;
+  overflow: hidden;
+}
+
+.page-cover.full img {
+  object-fit: cover;
+  margin: initial;
+}
+
+.page-info {
+    left: 0;
 }
 
 .page-text {
@@ -115,12 +110,16 @@ a {
 
 /** PAGE STYLES **/
 
-.intro .page-left {
-    background: #F49322;
+.intro .page-cover,
+.current .page-cover {
     opacity: 100;
 }
 
-.intro .page-left img {
+.intro .page-cover {
+    background: #F49322;
+}
+
+.intro .page-cover img {
   height: 90%;
   width: 90%;
   margin: auto;
@@ -131,58 +130,23 @@ a {
     margin-bottom: 100px;
 }
 
-.intro h1 {
-  margin-bottom: 24px;
-}
-
 .intro .scroll {
     text-align: center;
     margin-top: 100px;
 }
 
-.jdpower .page-left {
+.jdpower .page-cover {
     background: #F53C3C;
 }
 
-/**
-.jdpower .page-right .stat,
-.jdpower .page-right a {
-    color: #F53C3C;
-}
-**/
-
-.vlocity .page-left {
+.vlocity .page-cover {
     background: #0077F5;
 }
-
-/**
-.vlocity .page-right .stat,
-.vlocity .page-right a {
-    color: #0077F5;
-}
-**/
 
 
 /** tablet **/
 @media only screen
 and (max-width : 768px) {
-/**
-    .chapter {
-        height: auto !important;
-        display: initial;
-    }
-
-    .page {
-        height: auto;
-        width: 100%;
-    }
-
-    .page-right {
-        padding-top: 68px;
-        padding-bottom: 68px;
-    }
-**/
-
 
     .chapter {
         height: auto !important;
@@ -194,12 +158,12 @@ and (max-width : 768px) {
         height: auto;
     }
 
-    .page-left {
+    .page-cover {
         position: initial;
         opacity: 100;
     }
 
-    .page-right {
+    .page-info {
         left: initial;
         padding-top: 68px;
         padding-bottom: 68px;
@@ -330,28 +294,6 @@ sup a {
 }
 
 
-
-.old {
-  max-width: 700px;
-  padding: 0 20px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.old .quote {
-  margin-left: 25px;
-  margin-right: 25px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-
-  font-family: "Permanent Marker";
-  font-size: 20px;
-  line-height: 30px;
-  color: #434d54;
-}
-
-
-
 /** tablet **/
 @media only screen
 and (max-width : 768px) {
@@ -388,6 +330,10 @@ img.round {
 
 img.border {
   border: 1px solid #e3e3e3;
+}
+
+img.shadow {
+  box-shadow: 0 2px 16px 0 #CCCCCC;
 }
 
 .videoWrapper {
